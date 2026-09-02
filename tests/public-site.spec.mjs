@@ -11,7 +11,7 @@ test("public site loads its team routes and print action",async({page})=>{
   await page.getByRole("link",{name:"Calendar"}).click();
   await expect(page.getByText("0 matches")).toBeVisible();
   await page.getByRole("link",{name:"About Coach"}).click();
-  await expect(page.getByRole("heading",{name:"Who am I?"})).toBeVisible();
+  await expect(page.getByRole("heading",{name:"Coach, part-time puddle philosopher"})).toBeVisible();
 });
 
 test("private and internal build paths are unavailable",async({request})=>{

@@ -4,14 +4,14 @@
   "team": {
     "name": "Demo Testers 09",
     "nickname": "Modularity Mallards",
-    "coach": "Coach Test",
+    "coach": "Coach Quill Puddlewick",
     "coach_bio": {
-      "title": "Who am I?",
-      "intro": "This is a fictional demo team. The public SmallSide repository and site always ship this season so no real team, coach or child identity is exposed here — fork the repo and configure your own team with tools/new-season.html.",
-      "day_job": "Not a real coach — this profile exists only to demonstrate the season/team configuration a coach fills in for their own fork.",
-      "soccer_credentials": "None — fictional demo data.",
-      "plan": "No real practices are run against this season. It exists to show how a season, league profile and team identity are configured without editing application code.",
-      "sign_off": "Go Mallards! (not a real team)"
+      "title": "Coach, part-time puddle philosopher",
+      "intro": "I am Coach Quill Puddlewick, a completely fictional coach for the equally fictional Modularity Mallards. We are here to have a grand time with a football, several cones, and only the minimum legally advisable amount of bewilderment.",
+      "day_job": "Assistant Deputy Keeper of the Emergency Biscuit Tin. This position is fictional, but the responsibility is immense.",
+      "soccer_credentials": "I once explained offside to a duck. The duck disagreed, but it was a thoughtful disagreement.",
+      "plan": "Every Mallard gets plenty of ball contacts, a turn in every role, and a chance to make brave little decisions. We will play small-sided games, celebrate kindness, and treat mistakes as useful field research. The universe is vast; the next pass need not be.",
+      "sign_off": "Waddle on, Mallards — and remember where you left the cones."
     }
   },
   "timezone": "America/Denver",
