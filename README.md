@@ -15,6 +15,15 @@ Team, club, league and coach identity are all configuration, not code — nothin
 > creating a season, personalizing the site, adding optional images, checking
 > privacy, and publishing your fork.
 
+## Example season
+
+<img src="assets/images/modularity-mallards-hero.webp" alt="Illustrated crest for the fictional Modularity Mallards U9 soccer team" width="640">
+
+SmallSide ships with the fictional **Modularity Mallards** U9 season. It is a
+safe example of how a team name, crest, schedule, league profile, and coaching
+plan fit together. Fork the project and replace this demo configuration with
+your own public-safe team information.
+
 ## What works today
 
 - Responsive planning, printing and touchline-friendly views

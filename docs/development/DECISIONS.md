@@ -134,6 +134,6 @@ Export reuses `renderSession()`'s own output rather than a separate template: "C
 
 ## 2026-09-01 — License the project and split public/private repos for GitHub
 
-Completed the M6 open-source-readiness gates the 2026-08-29 decision above deferred. Added `LICENSE` (MIT, application code) and `LICENSE-CONTENT` (CC BY-SA 4.0, coaching content/docs), plus `CODE_OF_CONDUCT.md`, `SECURITY.md`, and `.github/ISSUE_TEMPLATE`/`PULL_REQUEST_TEMPLATE.md`. `soccer3.png` was confirmed as the coach's own photo with faces blurred for the privacy of other individuals in it — no separate rights review needed.
+Completed the M6 open-source-readiness gates the 2026-08-29 decision above deferred. Added `LICENSE` (MIT, application code) and `LICENSE-CONTENT` (CC BY-SA 4.0, coaching content/docs), plus `CODE_OF_CONDUCT.md`, `SECURITY.md`, and `.github/ISSUE_TEMPLATE`/`PULL_REQUEST_TEMPLATE.md`.
 
 Chose the split-repo model the 2026-08-11 readiness review originally recommended, rather than continuing the 2026-08-29 real-identity exception onto GitHub: this repository stays the coach's private operational copy (real season, schedule and identity, as already decided), and a separate public repository is built from a reviewed export — the fictional `2027-test-modularity-demo-u9` season as the active season, with the real season, real league profile, real schedule and this coach's photos excluded — rather than rewriting this repository's history. A fresh export was chosen over history rewriting as the lower-risk path, per the original review's own recommendation.

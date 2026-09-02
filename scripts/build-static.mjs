@@ -64,7 +64,7 @@ await Promise.all([
   "assets/js/terminology.js",
   "assets/js/theme.js",
   "assets/images/smallside-app-logo.webp",
-  "assets/images/soccer3.webp",
+  "assets/images/modularity-mallards-hero.webp",
   "data/library/resources.json"
 ].map(copyFile));
 await writeFile(resolve(dist,"_headers"),headers);
