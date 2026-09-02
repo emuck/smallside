@@ -11,7 +11,11 @@
       "day_job": "Assistant Deputy Keeper of the Emergency Biscuit Tin. This position is fictional, but the responsibility is immense.",
       "soccer_credentials": "I once explained offside to a duck. The duck disagreed, but it was a thoughtful disagreement.",
       "plan": "Every Mallard gets plenty of ball contacts, a turn in every role, and a chance to make brave little decisions. We will play small-sided games, celebrate kindness, and treat mistakes as useful field research. The universe is vast; the next pass need not be.",
-      "sign_off": "Waddle on, Mallards — and remember where you left the cones."
+      "sign_off": "Waddle on, Mallards — and remember where you left the cones.",
+      "photo": {
+        "src": "assets/images/modularity-mallards-coach.webp",
+        "alt": "Fictional Coach Quill Puddlewick in Modularity Mallards kit, holding a clipboard on a soccer field"
+      }
     }
   },
   "timezone": "America/Denver",
