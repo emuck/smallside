@@ -22,7 +22,7 @@ Team, club, league and coach identity are all configuration, not code — nothin
 SmallSide ships with the fictional **Modularity Mallards** U9 season. It is a
 safe example of how a team name, crest, schedule, league profile, and coaching
 plan fit together. Fork the project and replace this demo configuration with
-your own public-safe team information.
+your own public-safe team information. [View the live fictional demo →](https://emuck.github.io/smallside/)
 
 ## What works today
 
