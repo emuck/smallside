@@ -10,6 +10,11 @@ SmallSide is a youth-soccer season companion for volunteer coaches. It helps a c
 
 Team, club, league and coach identity are all configuration, not code — nothing in `assets/js/` or `index.html` names a specific club or team. This repository always ships a fictional demo season (see `data/seasons/2027-test-modularity-demo-u9/`); forking it and replacing that configuration with your own team is the supported way to run this for real.
 
+> **Setting up your own team?** Start with [Getting started: make SmallSide
+> yours](docs/GETTING_STARTED.md). It is a plain-language walkthrough for
+> creating a season, personalizing the site, adding optional images, checking
+> privacy, and publishing your fork.
+
 ## What works today
 
 - Responsive planning, printing and touchline-friendly views
@@ -40,14 +45,14 @@ Reusable library       League profiles
                     web portal
 ```
 
-A new season is activated by changing `data/current-season.json`; application code does not need to change. To fill out a new team/season's files without hand-editing JSON, serve the repo locally (see [Run and validate](#run-and-validate) below) and open `tools/new-season.html` — a form-based wizard that generates `season.json` and `practice-pattern.json` for you to save into `data/seasons/<season-id>/`. Read [Content packs and season configuration](docs/architecture/CONTENT_PACKS.md) for the complete workflow, including the parts the wizard doesn't cover yet (curriculum, new league profiles).
+A new season is activated by changing `data/current-season.json`; application code does not need to change. Start with [Getting started: make SmallSide yours](docs/GETTING_STARTED.md) for a plain-language walkthrough, including personalizing the team and adding optional images. Read [Content packs and season configuration](docs/architecture/CONTENT_PACKS.md) for the complete workflow and advanced options.
 
 ## Run your own team's site
 
 The content model above is reusable across teams and clubs on purpose — this is meant to be forked, not just read. To stand up your own:
 
 1. Fork this repository.
-2. Configure your team/season with `tools/new-season.html` (above) and point `data/current-season.json` at it.
+2. Follow [Getting started](docs/GETTING_STARTED.md) to configure your team/season and point `data/current-season.json` at it.
 3. In your fork's **Settings → Pages**, set **Source** to **GitHub Actions**. Push to `main` — the included workflow validates, builds and deploys automatically. No account beyond GitHub is needed. See [GitHub Pages portability](docs/architecture/GITHUB_PAGES.md).
 
 [Cloudflare Pages](docs/architecture/CLOUDFLARE_PAGES.md) is documented as an alternative — better suited if you want a custom domain or the security headers GitHub Pages doesn't support.
@@ -102,6 +107,7 @@ See [Deployment](docs/operations/DEPLOYMENT.md) for publishing your own fork.
 
 Start with the [documentation guide](docs/README.md). The most useful architecture documents are:
 
+- [Getting started: make SmallSide yours](docs/GETTING_STARTED.md)
 - [Architecture overview](docs/architecture/ARCHITECTURE.md)
 - [Content packs and season changes](docs/architecture/CONTENT_PACKS.md)
 - [Content data model](docs/architecture/DATA_MODEL.md)

@@ -7,6 +7,7 @@ Use this page to find the authoritative document for a question.
 | Question | Document |
 |---|---|
 | What is SmallSide and what must it protect? | [Product brief](product/PRODUCT_BRIEF.md) |
+| I want to set up my own team and season. Where do I begin? | [Getting started](GETTING_STARTED.md) |
 | What works now? | [Development status](development/STATUS.md) |
 | What are we building next? | [Feature plan](product/FEATURE_PLAN.md) |
 | How does the application work? | [Architecture overview](architecture/ARCHITECTURE.md) |
@@ -20,6 +21,7 @@ Use this page to find the authoritative document for a question.
 
 ## Product
 
+- [Getting started: make SmallSide yours](GETTING_STARTED.md): plain-language setup, personalization, privacy, and publishing walkthrough
 - [Product brief](product/PRODUCT_BRIEF.md): enduring purpose, principles and current team context
 - [Platform plan](product/PLATFORM_PLAN.md): strategy and milestone outcomes
 - [Feature plan](product/FEATURE_PLAN.md): prioritized capabilities and acceptance criteria
