@@ -1,0 +1,52 @@
+name: Verify site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install browser-test dependencies
+        run: npm ci
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Check browser scripts
+        run: for file in assets/js/*.js; do node --check "$file"; done
+      - name: Validate content
+        run: node scripts/validate-content.mjs
+      - name: Run regression tests
+        run: |
+          node scripts/test-content-validation.mjs
+          node scripts/test-activity-filters.cjs
+      - name: Build approved public site
+        run: node scripts/build-static.mjs
+      - name: Verify public-build boundary
+        run: |
+          test -f dist/index.html
+          test -f dist/_headers
+          test -f dist/404.html
+          test ! -e dist/docs
+          test ! -e dist/deploy
+          test ! -e dist/server
+          test ! -e dist/data/reflections
+          test ! -e dist/tools
+          test ! -e dist/data/seasons/index.json
+          test ! -e dist/assets/js/development.js
+          test ! -e dist/assets/js/seasons.js
+          ! rg -q 'assets/js/development\.js' dist/index.html
+          ! rg -q 'assets/js/seasons\.js' dist/index.html
+          ! rg -q 'href="#reflect"|route==="reflect"|function showReflect' dist/assets/js/dynamic.js
+          ! rg -q 'onclick=' dist/assets/js
+          git diff --check
+      - name: Exercise public site in Chromium
+        run: npm run test:browser

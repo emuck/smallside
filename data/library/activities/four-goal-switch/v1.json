@@ -1,0 +1,47 @@
+{
+  "id": "four-goal-switch",
+  "version": 1,
+  "contract_version": 2,
+  "title": "Four-goal Switch",
+  "icon": "Four",
+  "age_bands": ["u7", "u8", "u9"],
+  "phase": "small-sided-game",
+  "player_count": {"minimum": 5, "recommended": 8, "maximum": 12},
+  "duration": {"minimum": 18, "recommended": 21, "maximum": 25},
+  "skills": ["small-sided-play", "scanning", "passing", "one-v-one-attacking", "transition", "finishing"],
+  "decisions": ["find-space", "when-to-pass", "when-to-dribble", "when-to-shoot", "transition-forward"],
+  "equipment": ["balls", "marker-cones", "bibs", "mini-goals"],
+  "setup_complexity": "medium",
+  "participation": {"active_players": "all", "elimination": false, "queues": "none"},
+  "story": "Each team attacks two doors, so the best route can switch whenever defenders close one side.",
+  "setup": "Create a 20x25-yard field with two mini goals on each end line. Play 2v2 or 3v3 and keep spare balls beside both touchlines.",
+  "instructions": [
+    "Each team attacks the two goals on the opposite end line and defends its own two.",
+    "Play freely for three-minute rounds with rapid restarts from the coach or nearest player.",
+    "Rotate teams and any goalkeeper turns between rounds; avoid fixed positions.",
+    "Ask one short question between rounds, then let the game teach."
+  ],
+  "coach_lens": "Observe players looking away from a crowded goal, spreading naturally and reacting when possession changes. Do not add pass-count or touch restrictions.",
+  "questions": ["If one door is crowded, what else can you see?", "What changes the moment your team wins the ball?"],
+  "adaptations": {
+    "simplify": ["Widen the field or goals and play 3v2 temporarily."],
+    "challenge": ["Narrow the field slightly before adding any rule."],
+    "low_attendance": ["Play 2v2 or 3v2 and rotate the extra attacker every round."],
+    "high_attendance": ["Create a second field so games remain 2v2 or 3v3."],
+    "limited_equipment": ["Use cone gates; if only two goals exist, place one goal and one cone gate at each end."]
+  },
+  "safety": ["Leave retrieval space behind every goal and keep spectators clear.", "Use spare balls only after the previous ball is safely out."],
+  "diagram": {"src": "assets/diagrams/four-goal-switch.svg", "alt": "A three-versus-three game has two goals at each end; arrows show the attacking direction switching toward the less crowded goal."},
+  "review_status": "source-checked",
+  "source": {
+    "type": "adapted",
+    "title": "Trainingspraxis: 3 gegen 3 im Funino-Feld",
+    "publisher": "DFB-Akademie",
+    "url": "https://www.dfb-akademie.de/trainingspraxis/-/id-11011534",
+    "reviewed_at": "2026-08-03",
+    "rights_status": "linked-only-original-smallside-text-and-artwork",
+    "adaptation_status": "adapted-in-original-language",
+    "reviewer_notes": "Adapted from the DFB four-mini-goal small-sided format and its joy, intensity and repetition principles. SmallSide supplies original English delivery, adaptations, safety language and artwork."
+  },
+  "all_phase": true
+}

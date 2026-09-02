@@ -1,0 +1,10 @@
+{
+  "timezone": "America/Denver",
+  "starts": "2027-03-02",
+  "ends": "2027-05-11",
+  "recurrence": [
+    {"weekday": "Monday", "starts_at": "16:30", "ends_at": "17:45"},
+    {"weekday": "Wednesday", "starts_at": "16:30", "ends_at": "17:45"}
+  ],
+  "exceptions": []
+}

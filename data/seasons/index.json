@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "seasons": [
+    "data/seasons/2026-fictional-archived-demo/season.json",
+    "data/seasons/2027-test-modularity-demo-u9/season.json"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "gate-raiders",
+  "version": 1,
+  "title": "Gate Raiders",
+  "icon": "Gate",
+  "age_bands": [
+    "u7",
+    "u8"
+  ],
+  "duration": {
+    "minimum": 12,
+    "recommended": 13,
+    "maximum": 15
+  },
+  "skills": [
+    "one-v-one-attacking",
+    "ball-protection"
+  ],
+  "story": "Attackers carry the ball through a castle gate while defenders protect the kingdom.",
+  "setup": "15x20 area, four to six two-cone gates and pairs with one ball.",
+  "instructions": [
+    "Play 1v1 for 45-60 seconds.",
+    "A controlled dribble through any gate scores.",
+    "Switch roles, then opponents.",
+    "Ask what helped players escape."
+  ],
+  "coach_lens": "Notice speed changes, disguise and use of the body without prescribing one correct move.",
+  "adaptations": {
+    "simplify": [
+      "Use wider or more gates."
+    ],
+    "challenge": [
+      "Score at a different gate each time."
+    ]
+  },
+  "review_status": "retired",
+  "source": {
+    "type": "original-informed-by-guidance",
+    "title": "How to design football practices",
+    "publisher": "England Football Learning",
+    "url": "https://learn.englandfootball.com/articles-and-resources/coaching/resources/2024/How-to-design-football-practices",
+    "reviewed_at": "2026-07-30",
+    "rights_status": "original-smallside-text",
+    "adaptation_status": "original",
+    "reviewer_notes": "SmallSide-authored 1v1 game using original language and federation practice-design principles."
+  },
+  "moment": "in-possession"
+}

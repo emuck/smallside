@@ -1,0 +1,9 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"SmallSide season manifest",
+  "type":"object",
+  "required":["id","status","team","timezone","starts","ends","league_profile","curriculum","practice_pattern","games","activity_index","session_index","warmup","opening_session"],
+  "properties":{
+    "status":{"enum":["active","archived","test"]}
+  }
+}

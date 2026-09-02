@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "sessions": [
+    "data/library/sessions/welcome-ball-control.json",
+    "data/library/sessions/attack-defend-score.json",
+    "data/library/sessions/protect-turn-escape.json",
+    "data/library/sessions/find-friend-attack-space.json"
+  ]
+}

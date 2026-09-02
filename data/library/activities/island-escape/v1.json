@@ -1,0 +1,47 @@
+{
+  "id": "island-escape",
+  "version": 1,
+  "contract_version": 2,
+  "title": "Island Escape",
+  "icon": "Wave",
+  "age_bands": ["u6", "u7", "u8"],
+  "phase": "arrive-and-play",
+  "player_count": {"minimum": 6, "recommended": 10, "maximum": 16},
+  "duration": {"minimum": 7, "recommended": 9, "maximum": 11},
+  "skills": ["scanning", "change-of-direction"],
+  "decisions": ["find-space"],
+  "equipment": ["marker-cones"],
+  "setup_complexity": "low",
+  "participation": {"active_players": "all", "elimination": false, "queues": "none"},
+  "story": "Four safe islands sit at the corners of the space. Everyone else is at sea, and one shark decides who gets caught.",
+  "setup": "Mark four small islands (hoops, flat squares of cones, or field corners) at the corners of a half-pitch. One coach or player starts as the shark in the middle.",
+  "instructions": [
+    "Players move freely between islands; they are safe only while standing on one.",
+    "Players may stay on an island for a maximum of 5 seconds before they must move again.",
+    "The shark tries to tag players who are off an island.",
+    "A tagged player freezes at the center on one foot until a teammate runs past and taps them free.",
+    "Rotate the shark every 60-90 seconds so every player gets a turn."
+  ],
+  "coach_lens": "Notice who waits for a safe gap versus who leaves on impulse, and who checks around them before committing to a run.",
+  "questions": ["How do you decide when it is safe to leave an island?", "What did you see before you ran?"],
+  "adaptations": {
+    "simplify": ["Allow a longer stay on each island.", "Use a walking shark for the first round."],
+    "challenge": ["Add a second shark.", "Shrink the islands or add more distance between them."],
+    "low_attendance": ["Use three islands instead of four so islands stay close together."],
+    "high_attendance": ["Add islands and a second shark rather than crowding the existing ones."],
+    "limited_equipment": ["Use shoes, jackets or field lines to mark islands."]
+  },
+  "safety": ["Tag with an open-hand touch only; no grabbing, pushing or blocking a path.", "Keep islands far enough apart that players do not collide changing direction."],
+  "review_status": "field-tested",
+  "source": {
+    "type": "original-informed-by-guidance",
+    "title": "Children's Football Training Vision",
+    "publisher": "DFB-Akademie",
+    "url": "https://www.dfb-akademie.de/trainingsvision-kinderfussball/-/id-11008846",
+    "reviewed_at": "2026-08-29",
+    "rights_status": "original-smallside-text-and-artwork",
+    "adaptation_status": "original",
+    "reviewer_notes": "Coach-authored safe-zone tag game developed and field-tested with a real youth team, applying DFB guidance on playful small games, individual challenges and free decision-making. No source wording or artwork reproduced."
+  },
+  "moment": "none"
+}

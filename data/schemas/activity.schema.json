@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SmallSide activity",
+  "description": "Published activity versions are immutable, except for moment and all_phase: those are classification metadata about the drill, not drill content — they don't change what a coach or player does — so they may be added or corrected on an existing version in place rather than forcing a new version. Do not extend this exemption to any other field without a deliberate decision, since it exists specifically to let a mislabeled moment/all_phase be fixed without version churn.",
+  "type": "object",
+  "required": ["id", "version", "title", "duration", "skills", "setup", "instructions", "coach_lens", "adaptations", "source", "review_status"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "version": {"type": "integer", "minimum": 1},
+    "moment": {"enum": ["in-possession", "out-of-possession", "transition", "none"], "description": "The drill's primary coaching focus. Single-valued even for a drill that touches more than one moment — see all_phase for a drill that genuinely exercises all three. Required unless all_phase is true. \"none\" is for a drill with no ball/possession concept at all (a tag or movement game) — like all_phase, it is excluded from a session's moment-coverage denominator rather than forced into the possession taxonomy."},
+    "all_phase": {"type": "boolean", "const": true, "description": "Optional. Set true only for a drill that genuinely exercises all three moments of the game (free scrimmage, multi-goal games). When true, moment must be omitted — the validator rejects an activity that sets both, since a single primary moment doesn't apply. Its minutes are excluded from the denominator of a session's minutes-weighted moment coverage, and shown separately as uncounted time rather than folded into a moment silently."},
+    "contract_version": {"type": "integer", "minimum": 2},
+    "title": {"type": "string", "minLength": 1},
+    "duration": {"type": "object", "required": ["minimum", "recommended", "maximum"]},
+    "skills": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "phase": {"type": "string"},
+    "player_count": {"type": "object", "required": ["minimum", "recommended", "maximum"]},
+    "equipment": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "decisions": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "questions": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "participation": {"type": "object", "required": ["active_players", "elimination", "queues"]},
+    "setup_complexity": {"type": "string"},
+    "setup": {"type": "string", "minLength": 1},
+    "instructions": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "coach_lens": {"type": "string", "minLength": 1},
+    "adaptations": {"type": "object", "required": ["simplify", "challenge"]},
+    "diagram": {"type": "object", "required": ["src", "alt"]},
+    "source": {"type": "object", "required": ["type", "title", "publisher", "url", "reviewed_at", "rights_status", "adaptation_status", "reviewer_notes"]},
+    "review_status": {"enum": ["draft", "source-checked", "field-tested", "approved", "retired"]}
+  }
+}

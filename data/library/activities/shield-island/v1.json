@@ -1,0 +1,47 @@
+{
+  "id": "shield-island",
+  "version": 1,
+  "contract_version": 2,
+  "title": "Shield Island",
+  "icon": "Shield",
+  "age_bands": ["u7", "u8", "u9"],
+  "phase": "opposed-practice",
+  "player_count": {"minimum": 4, "recommended": 8, "maximum": 12},
+  "duration": {"minimum": 8, "recommended": 10, "maximum": 12},
+  "skills": ["ball-protection", "ball-control", "change-of-direction", "scanning"],
+  "decisions": ["find-space", "where-to-dribble", "win-ball"],
+  "equipment": ["balls", "marker-cones", "bibs"],
+  "setup_complexity": "low",
+  "participation": {"active_players": "all", "elimination": false, "queues": "none"},
+  "story": "A player keeps treasure safe on a small island while a friendly raider tries to touch the ball.",
+  "setup": "Create one 7x7-yard island for every pair, with one ball and safe space between islands.",
+  "instructions": [
+    "One player begins with the ball and keeps it inside the island for 20 seconds.",
+    "The raider scores by touching the ball with a foot; play continues until time ends.",
+    "The player with the ball may turn, stop, change speed or place their body between raider and ball.",
+    "Swap roles every round and ask each pair to show one escape they discovered."
+  ],
+  "coach_lens": "Look for players glancing at pressure, keeping the ball on the far side and turning toward open space. Allow experimentation rather than demanding a named turn.",
+  "questions": ["Where can you put your body to keep the ball safe?", "What space appears when the raider moves?"],
+  "adaptations": {
+    "simplify": ["Enlarge the island or let the raider walk."],
+    "challenge": ["Add two small escape gates; dribbling through either ends the round successfully."],
+    "low_attendance": ["Keep pairs; the coach joins an unmatched player."],
+    "high_attendance": ["Add islands rather than placing several raiders around one ball."],
+    "limited_equipment": ["Use existing field lines or four shoes to mark an island."]
+  },
+  "safety": ["Use standing foot challenges only; no pushing, grabbing or slide tackling.", "Stop the round if the ball enters another pair's island."],
+  "diagram": {"src": "assets/diagrams/shield-island.svg", "alt": "Several small square islands each contain one player shielding a ball from one raider."},
+  "review_status": "source-checked",
+  "source": {
+    "type": "original-informed-by-guidance",
+    "title": "How to help 5-11s develop their skills on the ball",
+    "publisher": "England Football Learning",
+    "url": "https://learn.englandfootball.com/articles-and-resources/coaching/resources/2023/How-to-help-5-11s-develop-their-skills-on-the-ball",
+    "reviewed_at": "2026-08-03",
+    "rights_status": "original-smallside-text-and-artwork",
+    "adaptation_status": "original",
+    "reviewer_notes": "SmallSide-authored paired game applying England Football guidance on staying on the ball, shielding, turning away from pressure and patient exploration. No source wording or artwork reproduced."
+  },
+  "moment": "in-possession"
+}

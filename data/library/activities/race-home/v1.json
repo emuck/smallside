@@ -1,0 +1,47 @@
+{
+  "id": "race-home",
+  "version": 1,
+  "contract_version": 2,
+  "title": "Race Home",
+  "icon": "Timer",
+  "age_bands": ["u7", "u8", "u9"],
+  "phase": "opposed-practice",
+  "player_count": {"minimum": 5, "recommended": 10, "maximum": 15},
+  "duration": {"minimum": 8, "recommended": 10, "maximum": 12},
+  "skills": ["defending", "transition", "scanning", "small-sided-play"],
+  "decisions": ["protect-goal", "win-ball", "transition-forward"],
+  "equipment": ["balls", "marker-cones", "mini-goals", "goals", "bibs"],
+  "setup_complexity": "medium",
+  "participation": {"active_players": "most", "elimination": false, "queues": "brief"},
+  "story": "Three attackers push forward on the big goal; the instant they lose the ball, the two defenders race the other way toward two small goals before the coach's count reaches zero.",
+  "setup": "Build a 30x20-yard area with a full-size goal at one end and two mini goals at the other. Three attacking bibs start in the middle third and attack the full-size goal; two defending bibs protect it. Keep spare balls beside the big goal for quick restarts.",
+  "instructions": [
+    "Three attackers attack the full-size goal; two defenders protect it.",
+    "The instant the defenders win the ball, the ball goes out of play, or a shot is taken, the defenders attack either small goal at the far end.",
+    "The coach counts down aloud from five the moment the ball turns over.",
+    "The counter-attacking pair scores by finishing in a small goal before zero; the three recovering players score by winning the ball back first.",
+    "Reset at the big goal and rotate roles frequently so everyone attacks and recovers."
+  ],
+  "coach_lens": "Watch the three recovering players, not the ball: do they turn and sprint the instant possession changes, or watch the ball first and lose a step? Notice their first three steps — toward the play or standing still — and whether anyone gets goal-side of the ball before challenging.",
+  "questions": ["What is the first thing your body should do the moment you lose the ball?", "Who can get goal-side first?"],
+  "adaptations": {
+    "simplify": ["Move the small goals nearer halfway so the recovery sprint is shorter."],
+    "challenge": ["Drop the countdown to four seconds, or play 4v3, so the recovery window is tighter."],
+    "low_attendance": ["Run 2v1 with a single defender if numbers are short, keeping the same turnover-and-race trigger."],
+    "high_attendance": ["Duplicate the area so no group waits long between reps."],
+    "limited_equipment": ["Use cone gates instead of mini goals for the counter-attack targets."]
+  },
+  "safety": ["Keep the recovery lane clear of spectators and other groups.", "Call out when a shot is taken so players near both goals stay aware of ball flight."],
+  "review_status": "draft",
+  "source": {
+    "type": "original-informed-by-guidance",
+    "title": "Trainingspraxis: Angreifen, Verteidigen und Umschalten",
+    "publisher": "DFB-Akademie",
+    "url": "https://www.dfb-akademie.de/trainingspraxis/-/id-11011534",
+    "reviewed_at": "2026-08-31",
+    "rights_status": "original-smallside-text",
+    "adaptation_status": "original",
+    "reviewer_notes": "SmallSide-authored 3v2 transition game scaling win-it-score-it's immediate-counterattack idea to a small group, directly motivated by a coach's own match observation that players recover slowly after losing the ball. Informed by the same DFB transition principles as win-it-score-it; no wording or artwork translated or reproduced."
+  },
+  "moment": "transition"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "welcome-ball-control",
+  "status": "published",
+  "title": "Ball control and movement",
+  "duration_minutes": 60,
+  "outcome": "Every player feels welcome and grows confident moving, stopping and changing direction with the ball.",
+  "theme": "1v1-dribbling",
+  "fourCorners": {
+    "technical": "players stop, start and change direction with the ball at their feet",
+    "physical": "players react quickly to a changing signal with a short burst of movement",
+    "psychological": "players feel welcome and grow confident trying a new move",
+    "social": null
+  },
+  "equipment": ["one ball per child", "30 flat cones", "two colors of bibs", "2-4 mini goals", "first-aid kit", "spare water"],
+  "coach_cues": ["Can you find some grass?", "Show me how you stop it.", "What could you try next?"],
+  "activities": [
+    {"activity_id":"traffic-lights","activity_version":2,"minutes":8},
+    {"activity_id":"treasure-collect","activity_version":1,"minutes":9},
+    {"activity_id":"gate-raiders","activity_version":2,"minutes":12,"variation":"Widen the gates and let players choose a new escape route each round."},
+    {"activity_id":"team-scrimmage","activity_version":1,"minutes":30,"progression":[
+      {"minutes":15,"note":"First half. Coach-managed restarts; rotate the goalkeeper."},
+      {"minutes":15,"note":"Second half, same setup. Switch ends; rotate anyone who hasn't played every role."}
+    ]}
+  ]
+}

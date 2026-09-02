@@ -1,0 +1,47 @@
+{
+  "id": "team-scrimmage",
+  "version": 1,
+  "contract_version": 2,
+  "title": "Team Scrimmage",
+  "icon": "Ball",
+  "age_bands": ["u6", "u7", "u8"],
+  "phase": "small-sided-game",
+  "player_count": {"minimum": 6, "recommended": 10, "maximum": 14},
+  "duration": {"minimum": 12, "recommended": 15, "maximum": 18},
+  "skills": ["small-sided-play", "scanning", "transition"],
+  "decisions": ["find-space", "when-to-pass", "when-to-shoot", "transition-forward", "restart-choice"],
+  "equipment": ["balls", "bibs", "mini-goals"],
+  "setup_complexity": "low",
+  "participation": {"active_players": "all", "elimination": false, "queues": "none"},
+  "story": "Two teams play a real, coach-managed match, just like game day.",
+  "setup": "Split the full practice space in half with a mini goal at each end. Use bibs to form two even teams and keep a spare ball at each sideline for fast restarts.",
+  "instructions": [
+    "Play two teams using the same restarts as game day: no goal kicks, corner kicks or throw-ins; coaches or goalkeepers reintroduce the ball.",
+    "Rotate the goalkeeper role at least once during each half.",
+    "Play the first half; keep interruptions brief and restart quickly.",
+    "At halftime, take a short water break, switch ends and adjust teams only if needed for balance.",
+    "Play the second half; note effort, enjoyment and independent decisions rather than the score."
+  ],
+  "coach_lens": "Watch for the behaviors from today's core activities appearing on their own in the run of play, without a coach prompt.",
+  "questions": ["What did we practice today that you used in the scrimmage?"],
+  "adaptations": {
+    "simplify": ["Play with an extra attacker to create more scoring chances.", "Widen the goals."],
+    "challenge": ["Add a second ball briefly to increase decisions.", "Introduce one new restart rule from your league's handbook."],
+    "low_attendance": ["Play continuous 3v3 or 4v4 with no substitutions."],
+    "high_attendance": ["Run two scrimmage fields at once so no one waits on the sideline."],
+    "limited_equipment": ["Use cone gates in place of mini goals."]
+  },
+  "safety": ["Rotate goalkeepers so no player is in goal for the entire session.", "Keep spare balls off the field of play, at the sideline only."],
+  "review_status": "field-tested",
+  "source": {
+    "type": "original-informed-by-guidance",
+    "title": "Play-Practice-Play",
+    "publisher": "U.S. Soccer",
+    "url": "https://www.ussoccer.com/stories/2018/02/five-things-to-know-about-playpracticeplay",
+    "reviewed_at": "2026-08-29",
+    "rights_status": "original-smallside-text-and-artwork",
+    "adaptation_status": "original",
+    "reviewer_notes": "Coach-authored, field-tested closing scrimmage applying U.S. Soccer's Play-Practice-Play principle that game-realistic play is itself the primary teaching tool, run under the league's own match-day restart rules. No source wording or artwork reproduced."
+  },
+  "all_phase": true
+}

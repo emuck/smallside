@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {"country": "United States", "title": "U.S. Soccer Play-Practice-Play", "age": "Grassroots 4v4", "type": "Framework", "url": "https://www.ussoccer.com/stories/2018/02/five-things-to-know-about-playpracticeplay", "use": "Use for the overall session sequence and player-centered coaching behavior."},
+    {"country": "United States", "title": "Massachusetts Youth Soccer session plans", "age": "U6+", "type": "Session plans", "url": "https://www.ussoccer.com/soccer-forward/resource-hub/coaches-session-plans", "use": "Age-banded plans with diagrams and progressions."},
+    {"country": "Germany", "title": "DFB Training Practice", "age": "Children", "type": "Small-sided games", "url": "https://www.dfb-akademie.de/trainingspraxis/-/id-11011534/", "use": "Translate and adapt 1v1, 2v2, 3v3 and Funino formats to increase decisions and repetitions."},
+    {"country": "Germany", "title": "DFB Children's Football Training Vision", "age": "Children", "type": "Coach guidance", "url": "https://www.dfb-akademie.de/trainingsvision-kinderfussball/-/id-11008846/", "use": "Guidance on multiple small games, individual challenges and free play."},
+    {"country": "Australia", "title": "MiniRoos Kick-Off sessions", "age": "4-9", "type": "10-session series", "url": "https://www.playfootball.com.au/coach/miniroos-kick-off-sessions", "use": "Age-appropriate activities with simple organization, stories and adaptations."},
+    {"country": "Australia", "title": "MiniRoos Activity Guide", "age": "4-9", "type": "Activity guide", "url": "https://playfootball.com.au/sites/play/files/2020-01/MiniRoos-Activity-Guide.pdf", "use": "Game Sense questions, observation points and suggested changes."},
+    {"country": "Scotland", "title": "Scottish FA Player Journey", "age": "5-8", "type": "Match environment", "url": "https://www.scottishfa.co.uk/en/play-football/children-youth-football/player-journey", "use": "Coach-role and small-sided match guidance focused on experimentation and equal opportunity."},
+    {"country": "Canada", "title": "Canada Soccer Grassroots Standards", "age": "U6-U7", "type": "Program standards", "url": "https://canadasoccer.com/wp-content/uploads/2026/02/2026-CS-GrassrootsStandards-EN_final91.pdf", "use": "Check playing time, rotation, coach ratios and development-first decisions."}
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "protect-turn-escape",
+  "status": "published",
+  "title": "Protect, turn and escape",
+  "duration_minutes": 60,
+  "outcome": "Players grow confident protecting the ball, recognizing open routes and changing direction away from pressure.",
+  "theme": "1v1-dribbling",
+  "fourCorners": {
+    "technical": "players shield the ball and turn away from pressure",
+    "physical": "players change direction quickly to stay in space or stay safe",
+    "psychological": "players stay composed with an opponent closing in, rather than rushing a decision",
+    "social": null
+  },
+  "equipment": ["one ball per child", "30 marker cones", "two colors of bibs", "4-8 mini goals or cone gates", "first-aid kit", "spare water"],
+  "coach_cues": ["What is around you?", "Can you keep the ball on the safe side?", "Which route opened?"],
+  "activities": [
+    {"activity_id": "shield-island", "activity_version": 1, "minutes": 9, "variation": "Short paired rounds; explore body position and turns without naming one correct technique."},
+    {"activity_id": "island-escape", "activity_version": 1, "minutes": 9},
+    {"activity_id": "escape-routes", "activity_version": 1, "minutes": 10, "variation": "Choose either exit and counter immediately after a ball win."},
+    {"activity_id": "team-scrimmage", "activity_version": 1, "minutes": 30, "progression": [
+      {"minutes": 15, "note": "First half. Coach-managed restarts; rotate the goalkeeper."},
+      {"minutes": 15, "note": "Second half, same setup. Switch ends; rotate anyone who hasn't played every role."}
+    ]}
+  ]
+}

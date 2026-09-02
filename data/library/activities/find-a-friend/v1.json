@@ -1,0 +1,47 @@
+{
+  "id": "find-a-friend",
+  "version": 1,
+  "contract_version": 2,
+  "title": "Find a Friend",
+  "icon": "Friends",
+  "age_bands": ["u7", "u8", "u9"],
+  "phase": "opposed-practice",
+  "player_count": {"minimum": 5, "recommended": 8, "maximum": 12},
+  "duration": {"minimum": 9, "recommended": 11, "maximum": 13},
+  "skills": ["passing", "receiving", "support", "scanning"],
+  "decisions": ["when-to-pass", "where-to-pass", "support-angle", "find-space"],
+  "equipment": ["balls", "marker-cones", "bibs"],
+  "setup_complexity": "medium",
+  "participation": {"active_players": "most", "elimination": false, "queues": "none"},
+  "story": "Two explorers keep their map away from one friendly map-snatcher and travel across either end line together.",
+  "setup": "Create two 10x14-yard fields. Play 2v1 on each; an attacking pair has one ball and scores by passing or dribbling over either end line under control.",
+  "instructions": [
+    "The pair attacks either end line and may change direction at any time.",
+    "The defender scores by touching the ball, then immediately joins the next attacking pair.",
+    "Rotate the defender every 45 to 60 seconds even without a ball win.",
+    "Celebrate dribbling when open and passing when a friend has better space."
+  ],
+  "coach_lens": "Look for the player without the ball moving where they can be seen, and the player on the ball noticing both defender and teammate. Do not require a pass count.",
+  "questions": ["Where can your friend see you?", "When is dribbling the better choice?"],
+  "adaptations": {
+    "simplify": ["Make the field wider or ask the defender to walk for the first round."],
+    "challenge": ["Narrow one end line to create a smaller target."],
+    "low_attendance": ["Play 2v1 in one field and rotate the defender often."],
+    "high_attendance": ["Add another 2v1 field or play 3v1; avoid a large keep-away circle."],
+    "limited_equipment": ["Use field lines or four shoes to mark the two scoring lines."]
+  },
+  "safety": ["Defenders win the ball with feet only and do not charge through players.", "Leave several yards between neighboring fields."],
+  "diagram": {"src": "assets/diagrams/find-a-friend.svg", "alt": "Two attackers spread around one defender between two scoring end lines; arrows show a pass and supporting run."},
+  "review_status": "source-checked",
+  "source": {
+    "type": "original-informed-by-guidance",
+    "title": "Plan and Create a Training Session",
+    "publisher": "U.S. Soccer Learning Center",
+    "url": "https://learning.ussoccer.com/articles/coaching/article/plan-and-create-a-training-session",
+    "reviewed_at": "2026-08-02",
+    "rights_status": "original-smallside-text-and-artwork",
+    "adaptation_status": "original",
+    "reviewer_notes": "SmallSide-authored directional 2v1 applying U.S. Soccer guidance to reduce defender numbers, preserve game-like decisions and adjust space for success. No source wording or artwork reproduced."
+  },
+  "moment": "in-possession"
+}

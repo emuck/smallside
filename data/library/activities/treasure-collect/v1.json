@@ -1,0 +1,46 @@
+{
+  "id": "treasure-collect",
+  "version": 1,
+  "contract_version": 2,
+  "title": "Treasure Collect",
+  "icon": "Cone",
+  "age_bands": ["u6", "u7", "u8"],
+  "phase": "explore",
+  "player_count": {"minimum": 4, "recommended": 8, "maximum": 14},
+  "duration": {"minimum": 7, "recommended": 9, "maximum": 11},
+  "skills": ["running-with-ball", "ball-control"],
+  "decisions": ["where-to-dribble"],
+  "equipment": ["balls", "flat-cones"],
+  "setup_complexity": "low",
+  "participation": {"active_players": "all", "elimination": false, "queues": "none"},
+  "story": "Every player dribbles across the sea to a pile of treasure, grabs one piece at a time, and races it home.",
+  "setup": "Line players along one touchline, each with a ball. Scatter flat cones along the far touchline as treasure.",
+  "instructions": [
+    "On go, every player dribbles with the ball at their feet to the far touchline.",
+    "Collect one cone, then dribble both the ball and the cone back to the starting touchline.",
+    "Drop the cone at the start and immediately return for another.",
+    "Count each player's cones when time is called; everyone plays every round, there is no elimination."
+  ],
+  "coach_lens": "Notice close touches at speed and players who look up to find an open lane rather than following the crowd.",
+  "questions": ["What did you do differently to go faster without losing the ball?"],
+  "adaptations": {
+    "simplify": ["Shorten the distance or use fewer, closer cones."],
+    "challenge": ["Add a second, farther cone pile or require a two-touch stop before turning back."],
+    "low_attendance": ["Use a shorter field so return trips stay quick."],
+    "high_attendance": ["Add more cones and a second lane so no one waits to start."],
+    "limited_equipment": ["Use any small, safe objects in place of cones."]
+  },
+  "safety": ["Space players across the width of the field so dribbling lanes do not cross.", "Use flat, lightweight cones only; no running with hard or edged objects."],
+  "review_status": "field-tested",
+  "source": {
+    "type": "original-informed-by-guidance",
+    "title": "MiniRoos Activity Guide",
+    "publisher": "Football Australia",
+    "url": "https://playfootball.com.au/sites/play/files/2020-01/MiniRoos-Activity-Guide.pdf",
+    "reviewed_at": "2026-08-29",
+    "rights_status": "original-smallside-text-and-artwork",
+    "adaptation_status": "original",
+    "reviewer_notes": "Coach-authored dribbling relay developed and field-tested with a real youth team, applying MiniRoos guidance on simple organization and maximum repetition. No source wording or artwork reproduced."
+  },
+  "moment": "in-possession"
+}

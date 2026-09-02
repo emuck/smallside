@@ -1,0 +1,27 @@
+{
+  "id": "demo-u9-academy",
+  "name": "Demo U9 Academy (fictional test data)",
+  "age_group": "u9",
+  "reviewed_at": "2026-08-29",
+  "format": {
+    "players_per_side": 7,
+    "goalkeeper": true,
+    "halves": 2,
+    "minutes_per_half": 25,
+    "halftime_minutes": 5,
+    "minimum_players_per_side": 6,
+    "officials": "coaches",
+    "restarts": "Goal kicks, corner kicks and throw-ins are used; no offside.",
+    "ball_size": "Size 4",
+    "required_equipment": "Shin guards",
+    "playing_time_policy": "Equal playing time for every player",
+    "substitutions_policy": "Unlimited rolling substitutions",
+    "uneven_numbers_policy": "Share players with the opposing team when numbers are very uneven; 6v6 is the minimum",
+    "not_used": "No penalty kicks in regular play",
+    "goalkeeper_handling": "Standard goalkeeper handling within the penalty area; opponents back off five steps once the goalkeeper has the ball in hand.",
+    "heading_policy": "Deliberate heading is not allowed. Change possession at the point of the header."
+  },
+  "sources": [
+    {"role": "controlling-local", "url": "https://example.com/demo-u9-academy-rules", "note": "Fictional placeholder — not a real league. Used only to exercise SmallSide's league-profile modularity."}
+  ]
+}

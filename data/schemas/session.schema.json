@@ -1,0 +1,18 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"SmallSide session template",
+  "type":"object",
+  "required":["id","title","duration_minutes","outcome","equipment","coach_cues","activities","theme","fourCorners","status"],
+  "properties":{
+    "id":{"type":"string"},
+    "title":{"type":"string"},
+    "status":{"enum":["draft","published"],"description":"Draft sessions may carry NEEDS_COACH_INPUT placeholders and are excluded from the site's session list and theme filtering; the validator only hard-fails placeholders once a session is published."},
+    "duration_minutes":{"type":"integer","minimum":15},
+    "outcome":{"type":"string"},
+    "theme":{"enum":["defending","attacking","shooting","space-possession","transition","1v1-dribbling"]},
+    "fourCorners":{"type":"object","required":["technical","physical","psychological","social"],"description":"Each corner is either a non-empty outcome string or null, meaning the session deliberately does not address that corner - a complete, valid value, not a NEEDS_COACH_INPUT placeholder. Rendered visibly as \"Not a focus in this session\" rather than omitted.","properties":{"technical":{"type":["string","null"],"minLength":1},"physical":{"type":["string","null"],"minLength":1},"psychological":{"type":["string","null"],"minLength":1},"social":{"type":["string","null"],"minLength":1}}},
+    "equipment":{"type":"array","minItems":1},
+    "coach_cues":{"type":"array","minItems":1},
+    "activities":{"type":"array","minItems":1,"items":{"type":"object","required":["activity_id","activity_version","minutes"],"properties":{"progression":{"type":"array","minItems":2,"items":{"type":"object","required":["minutes","note"]}},"shares_setup_with_previous":{"type":"boolean"},"setup_note":{"type":"string"}}}}
+  }
+}

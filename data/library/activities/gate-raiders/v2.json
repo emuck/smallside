@@ -1,0 +1,90 @@
+{
+  "id": "gate-raiders",
+  "version": 2,
+  "title": "Gate Raiders",
+  "icon": "Gate",
+  "age_bands": [
+    "u7",
+    "u8"
+  ],
+  "duration": {
+    "minimum": 12,
+    "recommended": 13,
+    "maximum": 15
+  },
+  "skills": [
+    "one-v-one-attacking",
+    "ball-protection"
+  ],
+  "story": "Attackers carry the ball through a castle gate while defenders protect the kingdom.",
+  "setup": "15x20 area, four to six two-cone gates and pairs with one ball.",
+  "instructions": [
+    "Play 1v1 for 45-60 seconds.",
+    "A controlled dribble through any gate scores.",
+    "Switch roles, then opponents.",
+    "Ask what helped players escape."
+  ],
+  "coach_lens": "Notice speed changes, disguise and use of the body without prescribing one correct move.",
+  "adaptations": {
+    "simplify": [
+      "Use wider or more gates."
+    ],
+    "challenge": [
+      "Score at a different gate each time."
+    ],
+    "low_attendance": [
+      "Use one smaller area and repeat short rounds."
+    ],
+    "high_attendance": [
+      "Duplicate the area so every player stays involved."
+    ],
+    "limited_equipment": [
+      "Use shoes or field markings when cones or goals are unavailable."
+    ]
+  },
+  "review_status": "source-checked",
+  "source": {
+    "type": "original-informed-by-guidance",
+    "title": "How to design football practices",
+    "publisher": "England Football Learning",
+    "url": "https://learn.englandfootball.com/articles-and-resources/coaching/resources/2024/How-to-design-football-practices",
+    "reviewed_at": "2026-07-30",
+    "rights_status": "original-smallside-text",
+    "adaptation_status": "original",
+    "reviewer_notes": "SmallSide-authored 1v1 game using original language and federation practice-design principles. Version 2 adds standardized delivery metadata and an original SmallSide diagram without changing the activity rules."
+  },
+  "contract_version": 2,
+  "phase": "opposed-practice",
+  "player_count": {
+    "minimum": 4,
+    "recommended": 8,
+    "maximum": 12
+  },
+  "equipment": [
+    "balls",
+    "marker-cones",
+    "bibs"
+  ],
+  "decisions": [
+    "when-to-dribble",
+    "where-to-dribble",
+    "win-ball"
+  ],
+  "questions": [
+    "How can you make the defender move before you escape?"
+  ],
+  "setup_complexity": "medium",
+  "participation": {
+    "active_players": "all",
+    "elimination": false,
+    "queues": "none"
+  },
+  "safety": [
+    "Check spacing and playing surface before starting."
+  ],
+  "diagram": {
+    "src": "assets/diagrams/gate-raiders.svg",
+    "alt": "Two pairs play one versus one among several cone gates, with arrows through open gates."
+  },
+  "moment": "in-possession"
+}

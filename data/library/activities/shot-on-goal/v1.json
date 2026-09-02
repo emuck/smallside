@@ -1,0 +1,46 @@
+{
+  "id": "shot-on-goal",
+  "version": 1,
+  "contract_version": 2,
+  "title": "Shot on Goal",
+  "icon": "Ball",
+  "age_bands": ["u7", "u8", "u9"],
+  "phase": "opposed-practice",
+  "player_count": {"minimum": 4, "recommended": 8, "maximum": 12},
+  "duration": {"minimum": 7, "recommended": 9, "maximum": 11},
+  "skills": ["finishing", "passing", "receiving"],
+  "decisions": ["when-to-shoot"],
+  "equipment": ["balls", "goals"],
+  "setup_complexity": "low",
+  "participation": {"active_players": "most", "elimination": false, "queues": "brief"},
+  "story": "A player passes to the coach on the wing, sprints forward for the return, and finishes first-time without a touch to set it up.",
+  "setup": "Coach stands wide of the goal, a few yards outside the width of the area. Players line up with balls at the top of the area, one at a time.",
+  "instructions": [
+    "The player passes to the coach on the wing, then sprints toward goal.",
+    "The coach plays the ball back into the player's path.",
+    "The player strikes the first-time shot on goal without controlling it first.",
+    "Rotate quickly to the back of the line; run two lines at once when numbers allow to keep the wait brief."
+  ],
+  "coach_lens": "Notice the run timed to arrive as the ball does, a firm first pass to the coach and a committed strike rather than a tentative poke.",
+  "questions": ["Where did you want the return pass to meet you?"],
+  "adaptations": {
+    "simplify": ["Allow one controlling touch before the shot.", "Move the coach closer for an easier return pass."],
+    "challenge": ["Serve the return pass slightly behind the run so the player must adjust.", "Add a second coach or line on the opposite wing."],
+    "low_attendance": ["Run one line and let players go twice each."],
+    "high_attendance": ["Run two lines from both wings into the same goal to halve the wait."],
+    "limited_equipment": ["Use a cone-gate target if a full goal is not available."]
+  },
+  "safety": ["Only one player shoots at a time; keep the line back from the shooting lane.", "Check the goal is secured or weighted before shooting drills begin."],
+  "review_status": "field-tested",
+  "source": {
+    "type": "original-informed-by-guidance",
+    "title": "How to help 5-11s develop their skills on the ball",
+    "publisher": "England Football Learning",
+    "url": "https://learn.englandfootball.com/articles-and-resources/coaching/resources/2023/How-to-help-5-11s-develop-their-skills-on-the-ball",
+    "reviewed_at": "2026-08-29",
+    "rights_status": "original-smallside-text-and-artwork",
+    "adaptation_status": "original",
+    "reviewer_notes": "Coach-authored wing-combination finishing pattern developed and field-tested with a real youth team, applying England Football guidance on realistic, repeatable ball-skill practice. No source wording or artwork reproduced."
+  },
+  "moment": "in-possession"
+}

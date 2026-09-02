@@ -1,0 +1,28 @@
+{
+  "id": "2026-fictional-archived-demo",
+  "status": "archived",
+  "team": {
+    "name": "Demo Archived 06",
+    "nickname": "Legacy Larks",
+    "coach": "Coach Test Archive",
+    "coach_bio": {
+      "title": "Who am I?",
+      "intro": "This is a fictional archived-season demo, kept to prove SmallSide's archive/switch modularity — it is not a real team.",
+      "day_job": "Not a real coach — fictional archive demo data.",
+      "soccer_credentials": "None — fictional demo data.",
+      "plan": "No real practices were run against this season.",
+      "sign_off": "Go Larks! (not a real team)"
+    }
+  },
+  "timezone": "America/Denver",
+  "starts": "2026-03-03",
+  "ends": "2026-05-12",
+  "league_profile": "data/profiles/leagues/demo-u9-academy.json",
+  "curriculum": "data/seasons/2026-fictional-archived-demo/curriculum.json",
+  "practice_pattern": "data/seasons/2026-fictional-archived-demo/practice-pattern.json",
+  "games": "data/seasons/2026-fictional-archived-demo/schedule.json",
+  "activity_index": "data/library/activities/index.json",
+  "session_index": "data/library/sessions/index.json",
+  "warmup": "data/library/warmup.json",
+  "opening_session": "welcome-ball-control"
+}

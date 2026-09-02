@@ -1,0 +1,26 @@
+{
+  "id": "attack-defend-score",
+  "status": "published",
+  "title": "Attack, defend and score",
+  "duration_minutes": 60,
+  "outcome": "Players recognize chances to score, protect a goal and attack quickly after winning the ball.",
+  "theme": "shooting",
+  "fourCorners": {
+    "technical": "players strike the ball on goal after receiving or carrying it into space",
+    "physical": "players sprint into space to arrive as the ball does",
+    "psychological": "players recover quickly after losing the ball and stay ready to attack again",
+    "social": null
+  },
+  "equipment": ["one ball per child", "30 marker cones", "two colors of bibs", "4-8 mini goals or cone gates", "first-aid kit", "spare water"],
+  "coach_cues": ["Can you see an open goal?", "Can you get between the ball and goal?", "What can you do when you win it?"],
+  "activities": [
+    {"activity_id": "shot-on-goal", "activity_version": 1, "minutes": 8},
+    {"activity_id": "goal-rush", "activity_version": 1, "minutes": 9, "variation": "Explore both goals, look up and shoot when the road opens."},
+    {"activity_id": "win-it-score-it", "activity_version": 1, "minutes": 10, "variation": "Short 1v1 rounds with an immediate counterattack after a ball win.", "shares_setup_with_previous": true, "setup_note": "Same two lanes and mini goals as goal-rush; narrow each lane slightly and hand out bibs to split into 1v1 pairs."},
+    {"activity_id": "race-home", "activity_version": 1, "minutes": 10},
+    {"activity_id": "team-scrimmage", "activity_version": 1, "minutes": 20, "progression": [
+      {"minutes": 10, "note": "First half. Coach-managed restarts; rotate the goalkeeper."},
+      {"minutes": 10, "note": "Second half, same setup. Switch ends; rotate anyone who hasn't played every role."}
+    ]}
+  ]
+}

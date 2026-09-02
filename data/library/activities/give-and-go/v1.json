@@ -1,0 +1,47 @@
+{
+  "id": "give-and-go",
+  "version": 1,
+  "contract_version": 2,
+  "title": "Give and Go",
+  "icon": "Sprint",
+  "age_bands": ["u7", "u8", "u9"],
+  "phase": "opposed-practice",
+  "player_count": {"minimum": 4, "recommended": 8, "maximum": 12},
+  "duration": {"minimum": 6, "recommended": 8, "maximum": 10},
+  "skills": ["passing", "receiving", "finishing", "scanning"],
+  "decisions": ["where-to-pass", "when-to-shoot", "support-angle"],
+  "equipment": ["balls", "marker-cones", "goals"],
+  "setup_complexity": "low",
+  "participation": {"active_players": "most", "elimination": false, "queues": "brief"},
+  "story": "A player starts at midfield, plays the ball out to a teammate or coach near the sideline, and sprints forward for the return and a shot on goal.",
+  "setup": "Use a full-size or reduced goal at one end. Line players at the halfway line with balls; place a coach or a second line of players roughly halfway between midfield and the goal, near the sideline.",
+  "instructions": [
+    "The player starts at midfield and passes out to the coach or a teammate stationed near the sideline, about halfway to goal.",
+    "The instant the pass is played, the player sprints forward toward goal.",
+    "The receiver plays the ball straight back into the runner's path.",
+    "The runner meets the ball and strikes a shot on goal.",
+    "Rotate quickly to the back of the line; rotate who plays the return pass too."
+  ],
+  "coach_lens": "Notice whether the run is timed to arrive as the return ball does, whether the first pass carries enough weight to reach the target, and whether the shot is struck with purpose rather than a tentative poke.",
+  "questions": ["Where do you want the return pass to meet you?", "How hard does your first pass need to be to get there?"],
+  "adaptations": {
+    "simplify": ["Shorten the run by starting closer to the sideline target.", "Allow an extra touch to settle the return before shooting."],
+    "challenge": ["Have the receiver vary the return pass — ahead, behind or across the run — so the player must adjust.", "Add a passive defender jogging alongside for light pressure without a real ball challenge."],
+    "low_attendance": ["Run one line and let players go twice each."],
+    "high_attendance": ["Run two lines from both sidelines into the same goal to halve the wait."],
+    "limited_equipment": ["Use a cone-gate target if a full goal is not available."]
+  },
+  "safety": ["Only one player shoots at a time; keep the line back from the shooting lane.", "Check the goal is secured or weighted before shooting drills begin."],
+  "review_status": "draft",
+  "source": {
+    "type": "original-informed-by-guidance",
+    "title": "How to help 5-11s develop their skills on the ball",
+    "publisher": "England Football Learning",
+    "url": "https://learn.englandfootball.com/articles-and-resources/coaching/resources/2023/How-to-help-5-11s-develop-their-skills-on-the-ball",
+    "reviewed_at": "2026-08-31",
+    "rights_status": "original-smallside-text",
+    "adaptation_status": "original",
+    "reviewer_notes": "Coach-authored midfield-to-goal combination pattern already run regularly at practice, informed by the same England Football guidance on realistic, repeatable ball-skill practice as shot-on-goal. No source wording or artwork reproduced."
+  },
+  "moment": "in-possession"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "goal-rush",
+  "version": 1,
+  "contract_version": 2,
+  "title": "Goal Rush",
+  "icon": "Goal",
+  "age_bands": ["u6", "u7", "u8"],
+  "phase": "explore",
+  "player_count": {"minimum": 4, "recommended": 8, "maximum": 12},
+  "duration": {"minimum": 9, "recommended": 11, "maximum": 12},
+  "skills": ["finishing", "running-with-ball", "ball-control"],
+  "decisions": ["when-to-shoot", "where-to-dribble"],
+  "equipment": ["balls", "marker-cones", "mini-goals"],
+  "setup_complexity": "low",
+  "participation": {"active_players": "all", "elimination": false, "queues": "none"},
+  "story": "Players explore open roads and score in an unguarded goal before finding a new road.",
+  "setup": "Create two adjacent 12x15-yard lanes, each with a mini goal at both ends. Put two to four players with a ball in each lane.",
+  "instructions": [
+    "Everyone dribbles at the same time and may score in either goal in their lane.",
+    "After scoring, turn away and attack the other goal.",
+    "Ask players to look before choosing a goal and shoot when the road opens.",
+    "Play 60-second rounds; count personal adventures rather than ranking players."
+  ],
+  "coach_lens": "Look for a final touch out of the feet, a glance toward the goal and a purposeful strike. Avoid prescribing one shooting surface.",
+  "questions": ["What tells you the road to goal is open?", "What touch helps you get ready to shoot?"],
+  "adaptations": {
+    "simplify": ["Widen the goals or shorten the lane."],
+    "challenge": ["Add one roaming blocker who may intercept but not camp in a goal."],
+    "low_attendance": ["Use one lane and keep both goals available."],
+    "high_attendance": ["Add a third lane rather than adding queues."],
+    "limited_equipment": ["Use two-cone gates as goals and retrieve balls after each round."]
+  },
+  "safety": ["Keep each lane narrow enough to define space but wide enough to avoid head-on collisions.", "Shots stay below knee height."],
+  "diagram": {"src": "assets/diagrams/goal-rush.svg", "alt": "Two side-by-side lanes each have a goal at both ends and players dribbling toward open goals."},
+  "review_status": "source-checked",
+  "source": {
+    "type": "original-informed-by-guidance",
+    "title": "Assess Your Players and Environment - Setting Goals and Objectives",
+    "publisher": "U.S. Soccer Learning Center",
+    "url": "https://learning.ussoccer.com/articles/coaching/article/assess-players-and-environment",
+    "reviewed_at": "2026-08-02",
+    "rights_status": "original-smallside-text-and-artwork",
+    "adaptation_status": "original",
+    "reviewer_notes": "SmallSide-authored finishing exploration reflecting U.S. Soccer guidance that seven-year-olds need game-like scenarios, frequent involvement, dribbling and shooting. No source wording or artwork reproduced."
+  },
+  "moment": "in-possession"
+}

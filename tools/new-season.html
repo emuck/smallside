@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SmallSide — New season wizard</title>
+<style>
+  :root{--ink:#1b2a22;--muted:#5b6b62;--line:#d9e2dc;--paper:#f6f8f5;--white:#fff;--green:#1f6b46;--on-green:#fff;--mint:#e5f2ea;--orange:#c9531f}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 system-ui,sans-serif;padding:0 0 80px}
+  header{background:var(--green);color:var(--on-green);padding:28px max(20px,calc((100vw - 900px)/2))}
+  header h1{margin:0 0 6px;font-size:26px}
+  header p{margin:0;opacity:.9;max-width:640px}
+  main{max-width:900px;margin:0 auto;padding:28px 20px}
+  section{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:20px}
+  section h2{margin-top:0;font-size:18px}
+  section > p.hint{color:var(--muted);margin-top:-8px;font-size:14px}
+  label{display:block;font-weight:600;font-size:14px;margin:14px 0 4px}
+  label small{font-weight:400;color:var(--muted)}
+  input[type=text],input[type=date],input[type=time],textarea,select{width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:8px;font:inherit;background:var(--paper)}
+  textarea{min-height:90px;resize:vertical}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+  fieldset{border:1px dashed var(--line);border-radius:10px;padding:12px;margin-top:14px}
+  fieldset legend{font-size:13px;font-weight:700;color:var(--muted);padding:0 6px}
+  .recurrence-row{display:grid;grid-template-columns:1.4fr 1fr 1fr auto;gap:8px;align-items:end;margin-top:8px}
+  button{font:inherit;cursor:pointer;border-radius:8px;border:1px solid var(--line);background:var(--white);padding:9px 14px}
+  button.primary{background:var(--green);color:var(--on-green);border:0;font-weight:700}
+  button.ghost{background:transparent}
+  .image-picker{display:flex;gap:14px;align-items:center;margin-top:8px;flex-wrap:wrap}
+  .image-picker img{width:64px;height:64px;object-fit:contain;background:var(--mint);border-radius:8px;border:1px solid var(--line)}
+  .image-picker .meta{font-size:13px;color:var(--muted)}
+  .callout{border-left:4px solid var(--orange);background:#fdf3ec;padding:12px 14px;border-radius:0 10px 10px 0;font-size:14px;margin-top:10px}
+  .output pre{white-space:pre-wrap;word-break:break-word;background:#0f1a14;color:#d8f0e0;padding:14px;border-radius:10px;max-height:340px;overflow:auto;font-size:13px}
+  .output-actions{display:flex;gap:8px;margin:8px 0 20px}
+  ol.steps{padding-left:20px}
+  ol.steps li{margin-bottom:8px}
+  code{background:var(--mint);padding:1px 5px;border-radius:4px;font-size:13px}
+  .status{font-size:13px;color:var(--muted);margin-top:6px}
+  .error{color:#a5341f}
+</style>
+</head>
+<body>
+<header>
+  <h1>New season wizard</h1>
+  <p>Fills out <code>season.json</code> and <code>practice-pattern.json</code> for a new team/season from a form instead of hand-editing JSON. This page never writes into the repository — it generates files for you to save yourself, and runs entirely in your browser.</p>
+</header>
+<main>
+  <section>
+    <h2>Team</h2>
+    <div class="row">
+      <div><label>Season id <small>slug used as the folder name, e.g. <code>2027-spring-u8-team</code></small></label><input id="seasonId" type="text" placeholder="2027-spring-u8-example"></div>
+      <div><label>Timezone</label><input id="timezone" type="text" value="America/Los_Angeles"></div>
+    </div>
+    <label>Status <small>shown on the Seasons switcher; required by the validator</small></label>
+    <select id="seasonStatus">
+      <option value="test" selected>Test — not the live season yet (safe default)</option>
+      <option value="active">Active — this becomes the live season everyone sees by default</option>
+      <option value="archived">Archived — a past season kept for reference</option>
+    </select>
+    <div class="callout" id="activeStatusWarning" hidden>Only one season should be <code>active</code> at a time — the validator rejects a second one. Update <code>data/current-season.json</code> to point at this season only when you're ready to make it live, and set any prior active season to <code>archived</code> first.</div>
+    <div class="row">
+      <div><label>Team name</label><input id="teamName" type="text" placeholder="08BAcademy09"></div>
+      <div><label>Nickname</label><input id="teamNickname" type="text" placeholder="Example Otters"></div>
+    </div>
+    <label>Coach name</label><input id="coachName" type="text" placeholder="Coach name">
+    <div class="row">
+      <div><label>Season starts</label><input id="seasonStarts" type="date"></div>
+      <div><label>Season ends</label><input id="seasonEnds" type="date"></div>
+    </div>
+    <fieldset>
+      <legend>Team crest</legend>
+      <label>Crest image file <small>picked from your computer, not uploaded anywhere</small></label>
+      <input id="crestFile" type="file" accept="image/png,image/jpeg,image/webp">
+      <div class="image-picker" id="crestPreviewWrap" hidden>
+        <img id="crestPreview" alt="">
+        <div class="meta">
+          <div>Save as <code id="crestSuggestedPath"></code></div>
+          <a id="crestDownload" download><button type="button">Download renamed file</button></a>
+        </div>
+      </div>
+      <label>Crest alt text</label><input id="crestAlt" type="text" placeholder="Example Otters team crest">
+    </fieldset>
+  </section>
+
+  <section>
+    <h2>Coach biography</h2>
+    <p class="hint">Shown on the "Meet the coach" page. Keep it to what the coach is comfortable being public — see the privacy note in <code>docs/development/DECISIONS.md</code> (2026-08-29 entries) before including a child's name or employer.</p>
+    <label>Title</label><input id="bioTitle" type="text" value="Who am I?">
+    <label>Intro</label><textarea id="bioIntro" placeholder="I'm Coach ... and your coach for the ... this season."></textarea>
+    <label>Day job / off the clock</label><textarea id="bioDayJob"></textarea>
+    <label>Soccer credentials</label><textarea id="bioCredentials"></textarea>
+    <label>Club experience <small>optional</small></label><textarea id="bioClubExperience"></textarea>
+    <label>Coaching plan / philosophy</label><textarea id="bioPlan"></textarea>
+    <label>Sign-off</label><input id="bioSignOff" type="text" placeholder="Go Otters!">
+    <fieldset>
+      <legend>Coach photo (optional)</legend>
+      <input id="photoFile" type="file" accept="image/png,image/jpeg,image/webp">
+      <div class="image-picker" id="photoPreviewWrap" hidden>
+        <img id="photoPreview" alt="">
+        <div class="meta">
+          <div>Save as <code id="photoSuggestedPath"></code></div>
+          <a id="photoDownload" download><button type="button">Download renamed file</button></a>
+        </div>
+      </div>
+      <label>Photo alt text</label><input id="photoAlt" type="text" placeholder="Coach playing youth soccer">
+    </fieldset>
+  </section>
+
+  <section>
+    <h2>Practice pattern</h2>
+    <p class="hint">Recurring weekly practice slots. Exceptions (cancellations, time/location changes) are added later by editing <code>practice-pattern.json</code> directly.</p>
+    <div id="recurrenceRows"></div>
+    <button type="button" class="ghost" id="addRecurrence">+ Add practice day</button>
+  </section>
+
+  <section>
+    <h2>League profile and library references</h2>
+    <p class="hint">A league profile is reusable across seasons/teams that share the same age group and rules. Only create a new one if none of the existing profiles match.</p>
+    <label>League profile</label>
+    <select id="leagueProfileSelect"><option value="">Loading existing profiles…</option></select>
+    <div class="status" id="leagueProfileStatus"></div>
+    <label>Opening session <small>the first-week session template, from the reusable library</small></label>
+    <select id="openingSessionSelect"><option value="">Loading session library…</option></select>
+    <div class="row" style="margin-top:14px">
+      <div><label>Activity index <small>reusable library, usually unchanged</small></label><input id="activityIndex" type="text" value="data/library/activities/index.json"></div>
+      <div><label>Session index <small>reusable library, usually unchanged</small></label><input id="sessionIndex" type="text" value="data/library/sessions/index.json"></div>
+      <div><label>Warm-up <small>reusable library, usually unchanged</small></label><input id="warmup" type="text" value="data/library/warmup.json"></div>
+    </div>
+    <label>Games <small>sanitized calendar snapshot; typically produced by your own calendar-sync workflow</small></label>
+    <input id="gamesPath" type="text" value="data/schedule.json">
+  </section>
+
+  <section>
+    <button class="primary" id="generate">Generate season.json + practice-pattern.json</button>
+    <div id="validationErrors"></div>
+  </section>
+
+  <section id="outputSection" hidden>
+    <h2>Generated files</h2>
+    <div class="output">
+      <label>season.json</label>
+      <pre id="seasonOutput"></pre>
+      <div class="output-actions">
+        <button type="button" id="copySeason">Copy</button>
+        <a id="downloadSeason" download="season.json"><button type="button">Download season.json</button></a>
+      </div>
+      <label>practice-pattern.json</label>
+      <pre id="patternOutput"></pre>
+      <div class="output-actions">
+        <button type="button" id="copyPattern">Copy</button>
+        <a id="downloadPattern" download="practice-pattern.json"><button type="button">Download practice-pattern.json</button></a>
+      </div>
+    </div>
+    <div class="callout">
+      <b>This wizard does not build <code>curriculum.json</code>.</b> Copy an existing season's curriculum file as a starting template and edit the weeks/sessions by hand.
+    </div>
+    <h3>Next steps</h3>
+    <ol class="steps" id="nextSteps"></ol>
+  </section>
+</main>
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const slugify = value => String(value||"").toLowerCase().trim().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"");
+  const extOf = file => (file.name.match(/\.([a-z0-9]+)$/i)||[,"png"])[1].toLowerCase().replace("jpg","jpeg");
+
+  const wireImagePicker = (fileInputId, previewWrapId, previewId, pathId, downloadId, altInputId, suggestBase) => {
+    const fileInput = $(fileInputId);
+    fileInput.addEventListener("change", () => {
+      const file = fileInput.files[0];
+      if (!file) return;
+      const url = URL.createObjectURL(file);
+      const suggested = `${slugify(suggestBase()) || "team"}-${suggestBase.label}.${extOf(file)}`;
+      const path = `assets/images/${suggested}`;
+      $(previewId).src = url;
+      $(pathId).textContent = path;
+      const link = $(downloadId);
+      link.href = url;
+      link.download = suggested;
+      $(previewWrapId).hidden = false;
+      fileInput.dataset.chosenPath = path;
+    });
+  };
+  wireImagePicker("crestFile","crestPreviewWrap","crestPreview","crestSuggestedPath","crestDownload","crestAlt",
+    Object.assign(() => $("teamNickname").value || $("teamName").value, {label:"crest"}));
+  wireImagePicker("photoFile","photoPreviewWrap","photoPreview","photoSuggestedPath","photoDownload","photoAlt",
+    Object.assign(() => $("coachName").value, {label:"photo"}));
+
+  const weekdays = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+  const recurrenceRows = $("recurrenceRows");
+  const addRecurrenceRow = (weekday="Tuesday", start="17:00", end="18:00") => {
+    const row = document.createElement("div");
+    row.className = "recurrence-row";
+    row.innerHTML = `
+      <div><label>Weekday</label><select class="rc-weekday">${weekdays.map(d=>`<option ${d===weekday?"selected":""}>${d}</option>`).join("")}</select></div>
+      <div><label>Starts</label><input class="rc-start" type="time" value="${start}"></div>
+      <div><label>Ends</label><input class="rc-end" type="time" value="${end}"></div>
+      <button type="button" class="ghost rc-remove" title="Remove">✕</button>`;
+    row.querySelector(".rc-remove").addEventListener("click", () => row.remove());
+    recurrenceRows.appendChild(row);
+  };
+  addRecurrenceRow("Tuesday","17:00","18:00");
+  addRecurrenceRow("Thursday","17:00","18:00");
+  $("addRecurrence").addEventListener("click", () => addRecurrenceRow());
+  $("seasonStatus").addEventListener("change", () => {
+    $("activeStatusWarning").hidden = $("seasonStatus").value !== "active";
+  });
+
+  const loadIndex = async (path, arrayKey, selectId, statusId, labelFrom) => {
+    const select = $(selectId);
+    try {
+      const res = await fetch(path);
+      if (!res.ok) throw new Error(res.status);
+      const index = await res.json();
+      const entries = index[arrayKey] || [];
+      const records = await Promise.all(entries.map(async p => {
+        try { return {path: p, data: await (await fetch(`../${p}`)).json()}; } catch(_) { return {path: p, data: null}; }
+      }));
+      select.innerHTML = `<option value="">Select…</option>` + records.map(r =>
+        `<option value="${r.path}">${labelFrom(r)}</option>`).join("");
+      if (statusId) $(statusId).textContent = "";
+    } catch (error) {
+      select.innerHTML = `<option value="">Could not load — type a path manually below</option>`;
+      const manual = document.createElement("input");
+      manual.type = "text"; manual.placeholder = "data/profiles/leagues/your-league.json"; manual.id = selectId + "Manual";
+      manual.style.marginTop = "8px";
+      select.after(manual);
+      if (statusId) $(statusId).innerHTML = `<span class="error">Couldn't fetch ${path} — this page needs to be served over http(s), e.g. run <code>python3 -m http.server 4173 --bind 127.0.0.1</code> in the repo root and open this page at that address.</span>`;
+    }
+  };
+  loadIndex("../data/profiles/leagues/index.json", "leagues", "leagueProfileSelect", "leagueProfileStatus", r => r.data ? `${r.data.name} (${r.data.age_group})` : r.path);
+  loadIndex("../data/library/sessions/index.json", "sessions", "openingSessionSelect", null, r => r.data ? r.data.title : r.path);
+
+  const validate = () => {
+    const errors = [];
+    const id = $("seasonId").value.trim();
+    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(id)) errors.push("Season id must be lowercase letters, numbers and single hyphens.");
+    if (!$("teamName").value.trim()) errors.push("Team name is required.");
+    if (!$("coachName").value.trim()) errors.push("Coach name is required.");
+    const starts = $("seasonStarts").value, ends = $("seasonEnds").value;
+    if (!starts || !ends) errors.push("Season start and end dates are required.");
+    else if (starts > ends) errors.push("Season start date must not be after the end date.");
+    const leagueValue = $("leagueProfileSelect").value || (($("leagueProfileSelectManual")||{}).value||"").trim();
+    if (!leagueValue) errors.push("Select or enter a league profile path.");
+    const openingValue = $("openingSessionSelect").value || (($("openingSessionSelectManual")||{}).value||"").trim();
+    if (!openingValue) errors.push("Select or enter an opening session.");
+    if (recurrenceRows.children.length === 0) errors.push("Add at least one recurring practice day.");
+    const openingId = openingValue ? openingValue.split("/").pop().replace(/\.json$/,"") : "";
+    return {errors, id, leagueValue, openingId};
+  };
+
+  $("generate").addEventListener("click", () => {
+    const {errors, id, leagueValue, openingId} = validate();
+    const errorBox = $("validationErrors");
+    if (errors.length) {
+      errorBox.innerHTML = `<div class="callout error">${errors.map(e=>`• ${e}`).join("<br>")}</div>`;
+      $("outputSection").hidden = true;
+      return;
+    }
+    errorBox.innerHTML = "";
+
+    const crestPath = $("crestFile").dataset.chosenPath || "";
+    const photoPath = $("photoFile").dataset.chosenPath || "";
+    const coachBio = {
+      title: $("bioTitle").value.trim(),
+      intro: $("bioIntro").value.trim(),
+      day_job: $("bioDayJob").value.trim(),
+      soccer_credentials: $("bioCredentials").value.trim(),
+      ...( $("bioClubExperience").value.trim() ? {club_experience: $("bioClubExperience").value.trim()} : {} ),
+      plan: $("bioPlan").value.trim(),
+      sign_off: $("bioSignOff").value.trim(),
+      ...(photoPath ? {photo: {src: photoPath, alt: $("photoAlt").value.trim() || "Coach photo"}} : {})
+    };
+    const team = {
+      name: $("teamName").value.trim(),
+      nickname: $("teamNickname").value.trim(),
+      coach: $("coachName").value.trim(),
+      ...(crestPath ? {crest: {src: crestPath, alt: $("crestAlt").value.trim() || "Team crest"}} : {}),
+      coach_bio: coachBio
+    };
+    const recurrence = [...recurrenceRows.children].map(row => ({
+      weekday: row.querySelector(".rc-weekday").value,
+      starts_at: row.querySelector(".rc-start").value,
+      ends_at: row.querySelector(".rc-end").value
+    }));
+    const season = {
+      schema_version: 1,
+      id,
+      status: $("seasonStatus").value,
+      team,
+      timezone: $("timezone").value.trim(),
+      starts: $("seasonStarts").value,
+      ends: $("seasonEnds").value,
+      league_profile: leagueValue,
+      curriculum: `data/seasons/${id}/curriculum.json`,
+      practice_pattern: `data/seasons/${id}/practice-pattern.json`,
+      games: $("gamesPath").value.trim(),
+      activity_index: $("activityIndex").value.trim(),
+      session_index: $("sessionIndex").value.trim(),
+      warmup: $("warmup").value.trim(),
+      opening_session: openingId
+    };
+    const pattern = {
+      timezone: $("timezone").value.trim(),
+      starts: $("seasonStarts").value,
+      ends: $("seasonEnds").value,
+      recurrence,
+      exceptions: []
+    };
+
+    const seasonText = JSON.stringify(season, null, 2);
+    const patternText = JSON.stringify(pattern, null, 2);
+    $("seasonOutput").textContent = seasonText;
+    $("patternOutput").textContent = patternText;
+    $("downloadSeason").href = URL.createObjectURL(new Blob([seasonText], {type:"application/json"}));
+    $("downloadPattern").href = URL.createObjectURL(new Blob([patternText], {type:"application/json"}));
+    $("copySeason").onclick = () => navigator.clipboard.writeText(seasonText);
+    $("copyPattern").onclick = () => navigator.clipboard.writeText(patternText);
+
+    const imageSteps = [];
+    if (crestPath) imageSteps.push(`Move the downloaded crest file into <code>${crestPath}</code>.`);
+    if (photoPath) imageSteps.push(`Move the downloaded coach photo into <code>${photoPath}</code>.`);
+    $("nextSteps").innerHTML = [
+      `Create the folder <code>data/seasons/${id}/</code>.`,
+      `Save the two downloaded files there as <code>season.json</code> and <code>practice-pattern.json</code>.`,
+      ...imageSteps,
+      `Copy an existing season's <code>curriculum.json</code> (e.g. from the season named in <code>data/current-season.json</code>) into <code>data/seasons/${id}/curriculum.json</code> and edit the weeks and sessions.`,
+      `If <code>${$("gamesPath").value.trim()}</code> doesn't exist yet, produce it with your calendar-sync workflow (or point <code>games</code> at a sanitized schedule you already have).`,
+      `Add <code>"data/seasons/${id}/season.json"</code> to the <code>seasons</code> array in <code>data/seasons/index.json</code> so it's validated and shows up on the Seasons switcher.`,
+      $("seasonStatus").value === "active"
+        ? `Update <code>data/current-season.json</code> to point <code>manifest</code> at <code>data/seasons/${id}/season.json</code>, and set any prior active season's <code>status</code> to <code>archived</code> first — the validator rejects two seasons marked <code>active</code>.`
+        : `This season is marked <code>${$("seasonStatus").value}</code>, so it won't become the default until you change its <code>status</code> to <code>active</code> and point <code>data/current-season.json</code> at it.`,
+      `Run <code>node scripts/validate-content.mjs</code> and <code>node scripts/test-content-validation.mjs</code> from the repo root, then review the rendered site (use the Seasons switcher to preview it without activating it).`
+    ].map(s => `<li>${s}</li>`).join("");
+    $("outputSection").hidden = false;
+    $("outputSection").scrollIntoView({behavior:"smooth"});
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "id": "pair-passing",
+  "title": "Pair passing",
+  "description": "Four cones per pair of players — two cones per player, spaced a few steps apart so each player can shuffle side to side within their own pair. The two players stand facing each other across a passing gap between their cone-pairs, shifting left and right with the ball and exchanging passes with their partner across the gap.",
+  "setup": "Set two cones per player, spaced for a comfortable side-to-side shuffle. Pair players facing each other with a passing gap of about 5 yards between the two cone-pairs to start; adjust per session.",
+  "progressions": [
+    {"id": "clean-control-pass", "title": "Clean control and pass", "note": "Take a good first touch to control the ball before passing it back across the gap — quality of the touch is the focus, not speed."},
+    {"id": "right-foot-only", "title": "Right foot only", "note": "Repeat the same control-and-pass using only the right foot."},
+    {"id": "left-foot-only", "title": "Left foot only", "note": "Repeat the same control-and-pass using only the left foot."},
+    {"id": "open-body-receiving", "title": "Open body receiving", "note": "Open the body side-on to receive, so the first touch sets the ball toward the next pass instead of straight back."},
+    {"id": "one-touch-pass", "title": "One-touch pass", "note": "Reduce to one touch — pass the ball back first-time, no separate controlling touch."},
+    {"id": "pass-and-shuffle", "title": "Pass and shuffle", "note": "After passing, shuffle to your other cone before receiving the return, so no one receives standing still."},
+    {"id": "pass-count-challenge", "title": "Pass count challenge", "note": "Count clean passes completed as a pair in 90 seconds; try to beat the pair's count from the previous week."},
+    {"id": "extended-distance", "title": "Extended distance", "note": "Widen the gap between the two players so the pass travels farther and must be controlled with more pace."}
+  ]
+}

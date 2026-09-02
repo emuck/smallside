@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "contract_versions": [2],
+  "age_bands": ["u6", "u7", "u8", "u9", "u10"],
+  "phases": ["arrive-and-play", "explore", "opposed-practice", "small-sided-game"],
+  "skills": ["ball-control", "running-with-ball", "change-of-direction", "scanning", "one-v-one-attacking", "ball-protection", "finishing", "defending", "transition", "passing", "receiving", "support", "goalkeeper-distribution", "small-sided-play"],
+  "decisions": ["find-space", "when-to-dribble", "where-to-dribble", "when-to-pass", "where-to-pass", "when-to-shoot", "protect-goal", "win-ball", "transition-forward", "restart-choice", "support-angle"],
+  "equipment": ["balls", "flat-cones", "marker-cones", "bibs", "mini-goals", "goals"],
+  "setup_complexities": ["low", "medium"],
+  "participation_levels": ["all", "most"],
+  "queue_levels": ["none", "brief"],
+  "moments": ["in-possession", "out-of-possession", "transition", "none"],
+  "themes": ["defending", "attacking", "shooting", "space-possession", "transition", "1v1-dribbling"]
+}

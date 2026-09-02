@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "cycles": [
+    {"week": 1, "theme": "Modularity check: welcome session", "focus": "Confirms the shared session library renders for a different team, league profile and timezone.", "warmup_progressions": ["clean-control-pass"], "sessions": [{"day": "Monday", "session_id": "welcome-ball-control"}, {"day": "Wednesday", "session_id": "welcome-ball-control", "variation": "Reused unchanged from the shared session library — proves session reuse across teams."}]},
+    {"week": 2, "theme": "Modularity check: attacking session", "focus": "Confirms curriculum-to-session wiring works for a second season pack.", "warmup_progressions": ["right-foot-only"], "sessions": [{"day": "Monday", "session_id": "attack-defend-score"}, {"day": "Wednesday", "session_id": "attack-defend-score"}]}
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "2027-test-modularity-demo-u9",
+  "status": "active",
+  "team": {
+    "name": "Demo Testers 09",
+    "nickname": "Modularity Mallards",
+    "coach": "Coach Test",
+    "coach_bio": {
+      "title": "Who am I?",
+      "intro": "This is a fictional demo team. The public SmallSide repository and site always ship this season so no real team, coach or child identity is exposed here — fork the repo and configure your own team with tools/new-season.html.",
+      "day_job": "Not a real coach — this profile exists only to demonstrate the season/team configuration a coach fills in for their own fork.",
+      "soccer_credentials": "None — fictional demo data.",
+      "plan": "No real practices are run against this season. It exists to show how a season, league profile and team identity are configured without editing application code.",
+      "sign_off": "Go Mallards! (not a real team)"
+    }
+  },
+  "timezone": "America/Denver",
+  "starts": "2027-03-02",
+  "ends": "2027-05-11",
+  "league_profile": "data/profiles/leagues/demo-u9-academy.json",
+  "curriculum": "data/seasons/2027-test-modularity-demo-u9/curriculum.json",
+  "practice_pattern": "data/seasons/2027-test-modularity-demo-u9/practice-pattern.json",
+  "games": "data/seasons/2027-test-modularity-demo-u9/schedule.json",
+  "activity_index": "data/library/activities/index.json",
+  "session_index": "data/library/sessions/index.json",
+  "warmup": "data/library/warmup.json",
+  "opening_session": "welcome-ball-control"
+}

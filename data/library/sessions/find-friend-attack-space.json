@@ -1,0 +1,25 @@
+{
+  "id": "find-friend-attack-space",
+  "status": "published",
+  "title": "Find a teammate and attack space",
+  "duration_minutes": 60,
+  "outcome": "Players recognize when to carry the ball, when a teammate offers a better route and how to attack a less crowded goal.",
+  "theme": "space-possession",
+  "fourCorners": {
+    "technical": "players receive a passed ball and carry it into open space",
+    "physical": "players accelerate into space they've found before a defender closes it",
+    "psychological": "players decide between dribbling and passing under pressure, and trust their choice",
+    "social": "players move to be seen by a teammate and read when to combine with them"
+  },
+  "equipment": ["one ball per pair", "30 marker cones", "two colors of bibs", "4-8 mini goals or cone gates", "first-aid kit", "spare water"],
+  "coach_cues": ["Where can your teammate see you?", "What did the defender leave open?", "Can you switch to another goal?"],
+  "activities": [
+    {"activity_id": "give-and-go", "activity_version": 1, "minutes": 8},
+    {"activity_id": "find-a-friend", "activity_version": 1, "minutes": 9, "variation": "Revisit 2v1 over either end line; both passing and dribbling remain valid."},
+    {"activity_id": "pass-or-pounce", "activity_version": 1, "minutes": 10, "variation": "Attack two goals and read the defender rather than requiring a pass.", "shares_setup_with_previous": true, "setup_note": "Same two 2v1 fields as find-a-friend; widen them slightly and add a mini goal at each far end."},
+    {"activity_id": "team-scrimmage", "activity_version": 1, "minutes": 30, "progression": [
+      {"minutes": 15, "note": "First half. Coach-managed restarts; rotate the goalkeeper."},
+      {"minutes": 15, "note": "Second half, same setup. Switch ends; rotate anyone who hasn't played every role."}
+    ]}
+  ]
+}

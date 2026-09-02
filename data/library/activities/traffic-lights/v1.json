@@ -1,0 +1,50 @@
+{
+  "id": "traffic-lights",
+  "version": 1,
+  "title": "Traffic Lights+",
+  "icon": "Lights",
+  "age_bands": [
+    "u6",
+    "u7",
+    "u8"
+  ],
+  "duration": {
+    "minimum": 8,
+    "recommended": 9,
+    "maximum": 10
+  },
+  "skills": [
+    "ball-control",
+    "running-with-ball",
+    "change-of-direction"
+  ],
+  "story": "Every player drives their football through a busy town.",
+  "setup": "20x20 area, one ball each and four colored cone gates.",
+  "instructions": [
+    "Green: travel; red: stop and freeze.",
+    "Amber: tiny touches; blue: change direction.",
+    "Let a player invent a signal.",
+    "Use gates as destinations, not queues."
+  ],
+  "coach_lens": "Demonstrate in under 20 seconds and use one cue at a time.",
+  "adaptations": {
+    "simplify": [
+      "Use only green and red."
+    ],
+    "challenge": [
+      "Invite the other foot or a sole stop."
+    ]
+  },
+  "review_status": "retired",
+  "source": {
+    "type": "original-informed-by-guidance",
+    "title": "How to help 5-11s develop their skills on the ball",
+    "publisher": "England Football Learning",
+    "url": "https://learn.englandfootball.com/articles-and-resources/coaching/resources/2023/How-to-help-5-11s-develop-their-skills-on-the-ball",
+    "reviewed_at": "2026-07-30",
+    "rights_status": "original-smallside-text",
+    "adaptation_status": "original",
+    "reviewer_notes": "A common traffic-lights format written in original language and checked against federation ball-development guidance."
+  },
+  "moment": "in-possession"
+}

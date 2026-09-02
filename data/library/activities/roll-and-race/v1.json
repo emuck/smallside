@@ -1,0 +1,47 @@
+{
+  "id": "roll-and-race",
+  "version": 1,
+  "contract_version": 2,
+  "title": "Roll and Race",
+  "icon": "Keeper",
+  "age_bands": ["u7", "u8", "u9"],
+  "phase": "explore",
+  "player_count": {"minimum": 4, "recommended": 8, "maximum": 12},
+  "duration": {"minimum": 8, "recommended": 10, "maximum": 12},
+  "skills": ["goalkeeper-distribution", "receiving", "running-with-ball", "scanning"],
+  "decisions": ["restart-choice", "where-to-pass", "find-space"],
+  "equipment": ["balls", "marker-cones", "goals"],
+  "setup_complexity": "low",
+  "participation": {"active_players": "all", "elimination": false, "queues": "none"},
+  "story": "Keepers roll supplies through a gate to a teammate, then both race to new jobs.",
+  "setup": "Make pairs 8 to 12 yards apart with a two-cone gate between them. Give every pair a ball and leave safe space between channels.",
+  "instructions": [
+    "One player begins as goalkeeper with the ball in hands and rolls it through the gate.",
+    "The teammate receives, dribbles around an outside cone and returns to the goalkeeper spot.",
+    "The roller follows to the receiving spot, so roles change every turn.",
+    "Let each pair choose a wider gate or longer channel when ready."
+  ],
+  "coach_lens": "Notice a low, accurate roll into the receiver's path, a ready receiving shape and both players moving immediately after release.",
+  "questions": ["Where would your teammate like the ball?", "How can you make the roll easy to receive?"],
+  "adaptations": {
+    "simplify": ["Widen the gate and shorten the channel."],
+    "challenge": ["Place two gates so the goalkeeper scans and chooses one."],
+    "low_attendance": ["Keep pairs; the coach can join an unmatched player."],
+    "high_attendance": ["Add channels so every pair has a ball."],
+    "limited_equipment": ["Use a field line as the target and one shared outside marker per two channels."]
+  },
+  "safety": ["Roll underarm along the ground; do not punt or throw toward another group.", "Use only stationary goalkeeper handling in this introductory activity."],
+  "diagram": {"src": "assets/diagrams/roll-and-race.svg", "alt": "Pairs work in separate channels; a goalkeeper rolls through a central gate and the receiver dribbles around an outside cone as roles rotate."},
+  "review_status": "source-checked",
+  "source": {
+    "type": "original-informed-by-guidance",
+    "title": "MiniRoos Program Leader Session Guide 7-9",
+    "publisher": "Football Australia",
+    "url": "https://playfootball.com.au/sites/play/files/2018-02/ALDI%20MiniRoos%20Program%20Leader%20Session%20Guide_7-9.pdf",
+    "reviewed_at": "2026-08-02",
+    "rights_status": "original-smallside-text-and-artwork",
+    "adaptation_status": "original",
+    "reviewer_notes": "SmallSide-authored rotating distribution activity applying Football Australia principles of maximum involvement, short explanations, safe ground play and small groups. No source wording or artwork reproduced."
+  },
+  "moment": "in-possession"
+}

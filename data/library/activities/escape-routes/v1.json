@@ -1,0 +1,47 @@
+{
+  "id": "escape-routes",
+  "version": 1,
+  "contract_version": 2,
+  "title": "Escape Routes",
+  "icon": "Routes",
+  "age_bands": ["u7", "u8", "u9"],
+  "phase": "opposed-practice",
+  "player_count": {"minimum": 4, "recommended": 8, "maximum": 12},
+  "duration": {"minimum": 10, "recommended": 12, "maximum": 14},
+  "skills": ["one-v-one-attacking", "running-with-ball", "change-of-direction", "defending"],
+  "decisions": ["where-to-dribble", "when-to-dribble", "win-ball"],
+  "equipment": ["balls", "marker-cones", "bibs"],
+  "setup_complexity": "medium",
+  "participation": {"active_players": "most", "elimination": false, "queues": "brief"},
+  "story": "An explorer enters the maze and escapes across either bright end gate before the tracker wins the ball.",
+  "setup": "Build two 10x14-yard fields. Mark two wide scoring gates on opposite sides of each field and place two pairs at each field.",
+  "instructions": [
+    "An attacker enters with the ball; the defender starts two steps away.",
+    "The attacker scores by dribbling under control through either scoring gate.",
+    "If the defender wins it, the defender may escape through either gate immediately.",
+    "End after a score or ball out, switch the starting role and restart with the other pair."
+  ],
+  "coach_lens": "Notice whether the attacker looks at both exits, moves the defender one way and accelerates into the other. For defenders, praise protecting one route while staying ready to change.",
+  "questions": ["Which route looks open now?", "How can you make the tracker lean the wrong way?"],
+  "adaptations": {
+    "simplify": ["Widen both gates or delay the defender until the attacker's second touch."],
+    "challenge": ["Narrow one gate so the attacker must compare risk and space."],
+    "low_attendance": ["Use one field and alternate pairs after each short round."],
+    "high_attendance": ["Create another field; cap each field at three pairs."],
+    "limited_equipment": ["Use full end lines as scoring targets and field markings as boundaries."]
+  },
+  "safety": ["Keep waiting players to the side of the field, away from scoring gates.", "Use standing challenges only and stop balls leaving toward another group."],
+  "diagram": {"src": "assets/diagrams/escape-routes.svg", "alt": "An attacker and defender stand between two scoring gates; curved arrows show two possible escape routes."},
+  "review_status": "source-checked",
+  "source": {
+    "type": "adapted",
+    "title": "MiniRoos Activity Guide: Tricky Goal Lines",
+    "publisher": "Football Australia",
+    "url": "https://playfootball.com.au/sites/play/files/2020-01/MiniRoos-Activity-Guide.pdf",
+    "reviewed_at": "2026-08-03",
+    "rights_status": "linked-only-original-smallside-text-and-artwork",
+    "adaptation_status": "adapted-in-original-language",
+    "reviewer_notes": "The two-choice directional 1v1 idea is adapted into parallel small fields, immediate defender counters and short pair rotations to reduce waiting. Wording, name and diagram are original SmallSide work."
+  },
+  "moment": "in-possession"
+}

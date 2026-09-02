@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SmallSide standing warm-up",
+  "type": "object",
+  "required": ["id", "title", "description", "setup", "progressions"],
+  "properties": {
+    "id": {"type": "string"},
+    "title": {"type": "string"},
+    "description": {"type": "string", "minLength": 1},
+    "setup": {"type": "string", "minLength": 1},
+    "progressions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "note"],
+        "properties": {
+          "id": {"type": "string"},
+          "title": {"type": "string"},
+          "note": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

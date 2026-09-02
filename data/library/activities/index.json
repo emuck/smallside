@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "activities": [
+    "data/library/activities/treasure-island/v2.json",
+    "data/library/activities/traffic-lights/v2.json",
+    "data/library/activities/gate-raiders/v2.json",
+    "data/library/activities/two-goal-festival/v2.json",
+    "data/library/activities/goal-rush/v1.json",
+    "data/library/activities/win-it-score-it/v1.json",
+    "data/library/activities/find-a-friend/v1.json",
+    "data/library/activities/roll-and-race/v1.json",
+    "data/library/activities/shield-island/v1.json",
+    "data/library/activities/escape-routes/v1.json",
+    "data/library/activities/pass-or-pounce/v1.json",
+    "data/library/activities/four-goal-switch/v1.json",
+    "data/library/activities/island-escape/v1.json",
+    "data/library/activities/treasure-collect/v1.json",
+    "data/library/activities/shot-on-goal/v1.json",
+    "data/library/activities/team-scrimmage/v1.json",
+    "data/library/activities/race-home/v1.json",
+    "data/library/activities/give-and-go/v1.json"
+  ]
+}

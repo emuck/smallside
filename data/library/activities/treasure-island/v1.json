@@ -1,0 +1,53 @@
+{
+  "id": "treasure-island",
+  "version": 1,
+  "title": "Treasure Island",
+  "icon": "Pirate",
+  "age_bands": [
+    "u6",
+    "u7",
+    "u8"
+  ],
+  "duration": {
+    "minimum": 10,
+    "recommended": 11,
+    "maximum": 12
+  },
+  "skills": [
+    "ball-control",
+    "scanning"
+  ],
+  "story": "Players are pirates collecting treasure and dribbling it safely home.",
+  "setup": "20x20 area, one ball per player, flat cones in the middle and four corner ships.",
+  "instructions": [
+    "Start at a ship with a ball.",
+    "On sail, collect one treasure and return it.",
+    "Find an empty sea lane.",
+    "Finish with a player-invented turn."
+  ],
+  "coach_lens": "Praise looking up, soft touches and clever routes, not speed alone.",
+  "adaptations": {
+    "simplify": [
+      "Enlarge the island."
+    ],
+    "challenge": [
+      "Add one passive sea monster."
+    ]
+  },
+  "safety": [
+    "Never eliminate players."
+  ],
+  "diagram": "treasure-island",
+  "review_status": "retired",
+  "source": {
+    "type": "adapted",
+    "title": "Treasure Island session video",
+    "publisher": "England Football Learning",
+    "url": "https://www.youtube.com/watch?v=redI-51oa74",
+    "reviewed_at": "2026-07-30",
+    "rights_status": "linked-only",
+    "adaptation_status": "adapted-in-original-language",
+    "reviewer_notes": "SmallSide uses an original summary and setup; the source video is linked, not copied."
+  },
+  "moment": "in-possession"
+}

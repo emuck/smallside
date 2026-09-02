@@ -1,0 +1,47 @@
+{
+  "id": "pass-or-pounce",
+  "version": 1,
+  "contract_version": 2,
+  "title": "Pass or Pounce",
+  "icon": "Choice",
+  "age_bands": ["u7", "u8", "u9"],
+  "phase": "opposed-practice",
+  "player_count": {"minimum": 5, "recommended": 8, "maximum": 12},
+  "duration": {"minimum": 10, "recommended": 12, "maximum": 14},
+  "skills": ["passing", "support", "one-v-one-attacking", "finishing", "defending"],
+  "decisions": ["when-to-pass", "when-to-dribble", "when-to-shoot", "support-angle", "protect-goal"],
+  "equipment": ["balls", "marker-cones", "bibs", "mini-goals"],
+  "setup_complexity": "medium",
+  "participation": {"active_players": "most", "elimination": false, "queues": "brief"},
+  "story": "Two attackers approach two treasure doors while one guardian decides which danger to stop.",
+  "setup": "Create two 12x16-yard fields with two mini goals at one end. Play 2v1 toward the goals, with spare balls at the starting end.",
+  "instructions": [
+    "Two attackers enter together against one defender and may score in either goal.",
+    "The player on the ball may dribble, pass or shoot; the teammate finds a different route to goal.",
+    "If the defender wins it, dribble over the starting line to score.",
+    "End after a score or ball out, then rotate one attacker into defense."
+  ],
+  "coach_lens": "Look for the teammate without the ball creating a clear second choice and the ball carrier reading the defender rather than passing automatically.",
+  "questions": ["What did the guardian leave open?", "Where can you move to offer a different route?"],
+  "adaptations": {
+    "simplify": ["Widen the field and goals or begin with a walking defender."],
+    "challenge": ["Move the goals farther apart so the supporting run must be clearer."],
+    "low_attendance": ["Play one field and rotate the defender after every round."],
+    "high_attendance": ["Duplicate the 2v1; do not expand into one crowded game."],
+    "limited_equipment": ["Use cone gates and return balls from behind the goals between rounds."]
+  },
+  "safety": ["Keep spare balls outside the playing area and retrieve them only after a round.", "Use standing challenges and ground-level shots."],
+  "diagram": {"src": "assets/diagrams/pass-or-pounce.svg", "alt": "Two attackers face one defender and two goals; arrows show a dribble toward one goal and a pass to the supporting attacker near the other."},
+  "review_status": "source-checked",
+  "source": {
+    "type": "original-informed-by-guidance",
+    "title": "Plan and Create a Training Session",
+    "publisher": "U.S. Soccer Learning Center",
+    "url": "https://learning.ussoccer.com/articles/coaching/article/plan-and-create-a-training-session",
+    "reviewed_at": "2026-08-03",
+    "rights_status": "original-smallside-text-and-artwork",
+    "adaptation_status": "original",
+    "reviewer_notes": "SmallSide-authored directional 2v1 using U.S. Soccer guidance on game-like problems, fewer defenders, space adjustment and player decisions. No source wording or artwork reproduced."
+  },
+  "moment": "in-possession"
+}

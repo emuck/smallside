@@ -1,0 +1,47 @@
+{
+  "id": "win-it-score-it",
+  "version": 1,
+  "contract_version": 2,
+  "title": "Win It, Score It",
+  "icon": "Switch",
+  "age_bands": ["u7", "u8", "u9"],
+  "phase": "opposed-practice",
+  "player_count": {"minimum": 4, "recommended": 8, "maximum": 12},
+  "duration": {"minimum": 10, "recommended": 12, "maximum": 14},
+  "skills": ["defending", "transition", "one-v-one-attacking", "finishing"],
+  "decisions": ["protect-goal", "win-ball", "transition-forward", "when-to-shoot"],
+  "equipment": ["balls", "marker-cones", "mini-goals", "bibs"],
+  "setup_complexity": "medium",
+  "participation": {"active_players": "most", "elimination": false, "queues": "brief"},
+  "story": "One player attacks a castle; if the guardian wins the ball, the guardian immediately attacks the opposite castle.",
+  "setup": "Build two 10x15-yard fields with one mini goal at each end. Place two pairs at each field and spare balls beside the goals.",
+  "instructions": [
+    "An attacker starts with the ball and tries to score in the far goal.",
+    "The defender protects the goal and may win the ball.",
+    "On a win, the defender attacks the opposite goal immediately.",
+    "The round ends with a goal or ball out; swap the starting role and restart quickly."
+  ],
+  "coach_lens": "Notice whether defenders get between ball and goal, slow down near the attacker and recognize the instant they can attack. Praise recovery after being beaten.",
+  "questions": ["Where can you stand to protect the goal?", "What is your first thought when you win the ball?"],
+  "adaptations": {
+    "simplify": ["Start the defender one step farther away."],
+    "challenge": ["Use two small scoring gates at each end so players must scan."],
+    "low_attendance": ["Use one field and alternate pairs after every short round."],
+    "high_attendance": ["Duplicate fields; never form one long central line."],
+    "limited_equipment": ["Use cone gates and place spare balls safely outside the field."]
+  },
+  "safety": ["Use touch-tight defending without pushing or kicking through legs.", "Keep waiting pairs beside, not behind, the goals."],
+  "diagram": {"src": "assets/diagrams/win-it-score-it.svg", "alt": "Two players face each other between opposite goals; arrows show either player counterattacking after winning the ball."},
+  "review_status": "source-checked",
+  "source": {
+    "type": "original-informed-by-guidance",
+    "title": "Trainingspraxis: Angreifen, Verteidigen und Umschalten",
+    "publisher": "DFB-Akademie",
+    "url": "https://www.dfb-akademie.de/trainingspraxis/-/id-11011534",
+    "reviewed_at": "2026-08-02",
+    "rights_status": "original-smallside-text-and-artwork",
+    "adaptation_status": "original",
+    "reviewer_notes": "SmallSide-authored 1v1 transition game informed by DFB principles of small teams, goals, joy, intensity, repetition and immediate counterattack. German source reviewed; no wording or artwork translated or reproduced."
+  },
+  "moment": "transition"
+}
