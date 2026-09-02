@@ -1,5 +1,7 @@
 # SmallSide
 
+<img src="assets/images/smallside-app-logo.png" alt="SmallSide logo" width="160">
+
 [![Verify site](https://github.com/emuck/smallside/actions/workflows/verify.yml/badge.svg)](https://github.com/emuck/smallside/actions/workflows/verify.yml)
 [![License: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/content-CC%20BY--SA%204.0-lightgrey.svg)](LICENSE-CONTENT)
